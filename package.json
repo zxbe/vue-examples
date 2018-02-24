@@ -1,0 +1,34 @@
+{
+  "name": "vue-examples",
+  "version": "1.0.0",
+  "description": "Examples for [Vue.js](https://vuejs.org).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickbeerendonk/react-examples.git"
+  },
+  "author": "Rick Beerendonk",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/rickbeerendonk/react-examples/issues"
+  },
+  "homepage": "https://github.com/rickbeerendonk/react-examples#readme",
+  "scripts": {
+    "clean": "rimraf node_modules",
+    "open": "open",
+    "openserver": "node \"./Util 01 - Static File Server/static-file-server.js\" 8090"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.1",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "http-server": "0.11.1",
+    "mime-types": "^2.1.18",
+    "plugin-typescript": "8.0.0",
+    "systemjs": "0.21.0",
+    "systemjs-plugin-babel": "^0.0.25",
+    "typescript": "^2.7.2",
+    "vue": "^2.5.13"
+  }
+}
