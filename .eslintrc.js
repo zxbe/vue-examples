@@ -15,6 +15,6 @@ module.exports = {
     "vue"
   ],
   "extends": [
-    "plugin:vue/strongly-recommended" // "plugin:vue/recommended" "plugin:vue/essential"
+    "plugin:vue/recommended"
   ]
 }

@@ -3,10 +3,10 @@
 
 import Vue from 'vue';
 
-import Greeting from 'greeting';
+import GreetingComponent from 'GreetingComponent';
 
 // Register component globally
-Vue.component('greeting', Greeting);
+Vue.component('greeting-component', GreetingComponent);
 
 // Bootstrap
 new Vue({

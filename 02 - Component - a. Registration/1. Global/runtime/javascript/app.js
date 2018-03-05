@@ -4,12 +4,14 @@
 /* global Vue */
 
 // Define component
-const Greeting = {
+// @vue/component
+const GreetingComponent = {
+  name: 'GreetingComponent',
   template: '<h1>Hello World!</h1>'
 };
 
 // Register component globally
-Vue.component('greeting', Greeting);
+Vue.component('greeting-component', GreetingComponent);
 
 // Bootstrap
 new Vue({

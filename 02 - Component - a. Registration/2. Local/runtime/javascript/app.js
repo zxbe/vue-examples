@@ -4,7 +4,9 @@
 /* global Vue */
 
 // Define component
-const Greeting = {
+// @vue/component
+const GreetingComponent = {
+  name: 'GreetingComponent',
   template: '<h1>Hello World!</h1>'
 };
 
@@ -13,6 +15,6 @@ new Vue({
   el: '#app',
   // Register component locally
   components: {
-    'greeting': Greeting
+    'greeting-component': GreetingComponent
   }
 });

@@ -3,13 +3,13 @@
 
 import Vue from 'vue';
 
-import Greeting from 'greeting';
+import GreetingComponent from 'GreetingComponent';
 
 // Bootstrap
 new Vue({
   el: '#app',
   // Register component locally
   components: {
-    'greeting': Greeting
+    'greeting-component': GreetingComponent
   }
 });
