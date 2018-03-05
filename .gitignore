@@ -5,6 +5,7 @@
 dist/
 lib/
 Issues/
+temp/
 
 #################
 ## npm
@@ -12,18 +13,6 @@ Issues/
 
 node_modules/
 npm-debug.log
-
-#################
-## bower
-#################
-
-bower_components/
-
-#################
-## zeit next
-#################
-
-.next/
 
 #################
 ## Other

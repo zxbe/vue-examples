@@ -1,14 +1,9 @@
 /*! Mozilla Public License Version 2.0 !*/
 /*! Copyright © 2018 Rick Beerendonk   !*/
 
-/* global Vue */
+import Vue from '../../../node_modules/vue/dist/vue.esm.browser.js';
 
-// Define component
-// @vue/component
-const GreetingComponent = {
-  name: 'GreetingComponent',
-  template: '<h1>Hello World!</h1>'
-};
+import GreetingComponent from './GreetingComponent.js';
 
 // Bootstrap
 new Vue({
