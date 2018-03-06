@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "http-server": "0.11.1",
+    "http-vue-loader": "^1.3.4",
     "mime-types": "^2.1.18",
     "plugin-typescript": "8.0.0",
     "systemjs": "0.21.0",
