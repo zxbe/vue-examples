@@ -37,17 +37,19 @@ if (fs.statSync(filePath).isDirectory()) {
 
 const serverUri = `http://localhost:${portHttp}`;
 const extraPath = filePath.substring(basePath.length);
-const extraUri = `${serverUri}${extraPath}`;
+const extraUri = extraPath.split('\\').join('/');
+const totalUri = `${serverUri}${extraUri}`;
 
 //console.log('serverUri: ' + serverUri);
 //console.log('extraPath: ' + extraPath);
 //console.log('extraUri: ' + extraUri);
+//console.log('totalUri: ' + totalUri);
 
 // Start server
 // See: https://github.com/indexzero/http-server/
 const httpChild = childProcess.spawn('http-server', ['.', '-p', portHttp, '-c-1']);
 
 // Open browser
-const command = process.platform === "win32" ? `start "" "${extraUri}"` :
-              /* process.platform === "darwin" */ `open "${extraUri}"`;
+const command = process.platform === 'win32' ? `start "" "${totalUri}"` :
+              /* process.platform === "darwin" */ `open "${totalUri}"`;
 childProcess.exec(command);
