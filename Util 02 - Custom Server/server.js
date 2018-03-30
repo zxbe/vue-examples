@@ -18,7 +18,7 @@ const basePath = process.cwd();
 //console.log('basePath: ' + basePath);
 
 // Exit if no filePath is given
-if (!filePath || !filePath.startsWith(basePath)) {
+if (!filePath || !filePath.toLowerCase().startsWith(basePath.toLowerCase())) {
   console.warn('No file path to open.');
   process.exit();
 }
