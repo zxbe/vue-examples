@@ -4,8 +4,9 @@
 /* global process, require */
 /* eslint-disable no-console */
 
-const childProcess = require("child_process");
-const fs = require("fs");
+const childProcess = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 const portHttp = process.argv[2] || 8080;
 const portRest = +portHttp + 1;
@@ -24,9 +25,7 @@ if (!filePath || !filePath.toLowerCase().startsWith(basePath.toLowerCase())) {
 }
 
 if (fs.statSync(filePath).isDirectory()) {
-  filePath += '/';
-
-  const webpackConfigPath = filePath + 'webpack.config.js';
+  const webpackConfigPath = path.join(filePath, 'webpack.config.js');
   if (fs.existsSync(webpackConfigPath)) {
     // Webpack config exists, so execute webpack
     console.log('webpack');
