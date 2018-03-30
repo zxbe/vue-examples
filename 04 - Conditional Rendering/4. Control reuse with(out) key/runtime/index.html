@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Mozilla Public License Version 2.0 -->
+<!-- Copyright © 2018 Rick Beerendonk -->
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Rick Beerendonk">
+
+  <title>Conditional Rendering - Control reuse with(out) key</title>
+</head>
+
+<body>
+  <div id="app">
+
+    <ol>
+      <li>Enter some text in <imp>both</imp> input boxes.</li>
+      <li>Toggle</li>
+      <li>Observe: Without keys the input box value is preserved, which is wrong.</li>
+    </ol>
+    <button v-on:click="first = !first">Toggle</button>
+
+    <h1>Without Key</h1>
+    <div>
+      <div v-if="first">
+        <label>Option 1</label>
+        <input placeholder="One">
+      </div>
+      <div v-else>
+        <label>Option 2</label>
+        <input placeholder="Two">
+      </div>
+    </div>
+
+    <h1>With Key</h1>
+    <div>
+      <div v-if="first">
+        <label>Option 1</label>
+        <input placeholder="One" key="option1">
+      </div>
+      <div v-else>
+        <label>Option 2</label>
+        <input placeholder="Two" key="option2">
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
