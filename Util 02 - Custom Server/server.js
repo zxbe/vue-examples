@@ -47,7 +47,7 @@ const totalUri = `${serverUri}${extraUri}`;
 
 // Start server
 // See: https://github.com/indexzero/http-server/
-const httpChild = childProcess.spawn('http-server', ['.', '-p', portHttp, '-c-1']);
+const httpChild = childProcess.spawn('http-server', ['.', '-p', portHttp, '-c-1'], {shell: true, stdio: 'inherit'});
 
 // Open browser
 const command = process.platform === 'win32' ? `start "" "${totalUri}"` :
