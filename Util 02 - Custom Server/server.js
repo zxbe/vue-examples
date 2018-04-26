@@ -24,9 +24,25 @@ if (!filePath || !filePath.toLowerCase().startsWith(basePath.toLowerCase())) {
   process.exit();
 }
 
+/*** Helper functions ***/
+
+function findFileInPath(directory, file) {
+  const filename = path.join(directory, file);
+  if (fs.existsSync(filename)) {
+    return filename;
+  } else {
+    const basename = path.dirname(directory);
+    return basename && basename !== directory ? findFileInPath(basename, file) : null;
+  }
+}
+
+/*** Main functions ***/
+
+// Is Webpack project?
 if (fs.statSync(filePath).isDirectory()) {
-  const webpackConfigPath = path.join(filePath, 'webpack.config.js');
-  if (fs.existsSync(webpackConfigPath)) {
+  const webpackConfigName = 'webpack.config.js';
+  const webpackConfigPath = findFileInPath(filePath, webpackConfigName);
+  if (webpackConfigPath) {
     // Webpack config exists, so execute webpack
     console.log('webpack');
     //childProcess.spawnSync('webpack', ['.', '--config', webpackConfigPath]);
