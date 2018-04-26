@@ -15,8 +15,7 @@
   "scripts": {
     "clean": "rimraf node_modules",
     "open": "open",
-    "openserver_old": "node \"./Util 01 - Static File Server/static-file-server.js\" 8090",
-    "openserver": "node \"./Util 02 - Custom Server/server.js\" 8090"
+    "openserver": "node \"./Util 01 - Custom Server/server.js\" 8090"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -37,7 +36,6 @@
   "dependencies": {
     "http-server": "0.11.1",
     "http-vue-loader": "^1.3.4",
-    "mime-types": "^2.1.18",
     "vue": "^2.5.16"
   }
 }
