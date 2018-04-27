@@ -5,10 +5,8 @@ import Vue from 'vue';
 
 import GreetingComponent from './GreetingComponent.vue';
 
-const app = document.createElement('div');
-app.setAttribute('id', 'app');
-document.body.appendChild(app);
+const component = new Vue({
+  render: createElement => createElement(GreetingComponent)
+}).$mount();
 
-new Vue({
-  render: h => h(GreetingComponent)
-}).$mount('#app')
+document.body.appendChild(component.$el);
