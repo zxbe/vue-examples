@@ -38,7 +38,8 @@ function findFileInPath(directory, file) {
 
 /*** Main functions ***/
 
-// Is Webpack project?
+/// Is Webpack project? ///
+
 if (fs.statSync(filePath).isDirectory()) {
   const webpackConfigName = 'webpack.config.js';
   const webpackConfigPath = findFileInPath(filePath, webpackConfigName);
@@ -57,6 +58,8 @@ if (fs.statSync(filePath).isDirectory()) {
     process.exit();
   }
 }
+
+/// Just plain html? ///
 
 const serverUri = `http://localhost:${portHttp}`;
 const extraPath = filePath.substring(basePath.length);
