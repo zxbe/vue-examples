@@ -46,10 +46,4 @@ module.exports = {
     new VueLoaderPlugin(),
     new webpack.NamedModulesPlugin()
   ],
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    },
-    extensions: ['*', '.js', '.vue', '.json']
-  },
 };
