@@ -4,6 +4,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
   context: __dirname,
@@ -42,6 +43,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Setup - Webpack'
     }),
+    new VueLoaderPlugin(),
     new webpack.NamedModulesPlugin()
   ],
   resolve: {
