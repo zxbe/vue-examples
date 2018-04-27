@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   context: __dirname,
-  entry: "./site/src/main.js",
+  entry: './site/src/main.js',
   output: {
     path: __dirname + '/site/dist',
     filename: "bundle.js"
@@ -30,7 +30,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
       },
       {
         test: /\.vue$/,
