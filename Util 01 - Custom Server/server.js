@@ -45,9 +45,16 @@ if (fs.statSync(filePath).isDirectory()) {
   if (webpackConfigPath) {
     // Webpack config exists, so execute webpack
     console.log('webpack');
-    //childProcess.spawnSync('webpack', ['.', '--config', webpackConfigPath]);
-    childProcess.spawnSync('webpack-dev-server', ['.', '--hot', '--open', '--config', webpackConfigPath, '--content-base', filePath + 'site/dist']);
+    childProcess.spawnSync(
+      'webpack-dev-server', 
+      ['--config', `"${webpackConfigPath}"`], 
+      {
+        cwd: path.dirname(webpackConfigPath),
+        shell: true, 
+        stdio: 'inherit'
+      });
     console.log('webpack done');
+    process.exit();
   }
 }
 

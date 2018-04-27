@@ -11,12 +11,14 @@ module.exports = {
   entry: './site/src/main.js',
   output: {
     path: __dirname + '/site/dist',
-    filename: "bundle.js"
+    filename: "bundle.js",
   },
   devtool: 'source-map',
   devServer: {
     contentBase: './site/dist',
-    port: 9000
+    port: 9000,
+    hot: true,
+    open: true,
   },
   mode: 'development',
   module: {
@@ -36,14 +38,15 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-      }
-    ]
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Setup - Webpack'
+      title: 'Setup - Webpack',
     }),
     new VueLoaderPlugin(),
-    new webpack.NamedModulesPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
   ],
 };
