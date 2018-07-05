@@ -1,13 +1,9 @@
 {
   "presets": [
-    "env",
-    "react",
-    "stage-0"
+    "@babel/preset-env", 
+    ["@babel/preset-stage-1", { "decoratorsLegacy": true }]
   ],
   "plugins": [
-    "transform-class-properties",
-    "transform-decorators",
-    "transform-react-constant-elements",
-    "transform-react-inline-elements"
+    "transform-optional-catch-binding"
   ]
 }

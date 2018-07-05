@@ -1,5 +1,9 @@
 {
   "presets": [
-    "env"
+    "@babel/preset-env", 
+    ["@babel/preset-stage-1", { "decoratorsLegacy": true }]
+  ],
+  "plugins": [
+    "transform-optional-catch-binding"
   ]
 }
