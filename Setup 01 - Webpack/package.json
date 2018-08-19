@@ -13,7 +13,7 @@
     "@babel/core": "^7.0.0-rc.1",
     "@babel/polyfill": "^7.0.0-rc.1",
     "@babel/preset-env": "^7.0.0-rc.1",
-    "@babel/preset-stage-1": "^7.0.0-rc.1",
+    "babel-eslint": "^8.2.6",
     "babel-plugin-transform-optional-catch-binding": "^7.0.0-alpha.16",
     "babel-loader": "^8.0.0-beta",
     "css-loader": "^1.0.0",
