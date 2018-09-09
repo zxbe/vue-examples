@@ -12,10 +12,21 @@
     "url": "https://github.com/rickbeerendonk/react-examples/issues"
   },
   "homepage": "https://github.com/rickbeerendonk/react-examples#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run validate",
+      "pre-push": "npm run validate"
+    }
+  },
   "scripts": {
     "clean": "rimraf node_modules",
+    "eslint": "eslint . --ext .js,.jsx --cache",
+    "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
     "open": "open",
-    "openserver": "node \"./Util 01 - Custom Server/server.js\" 8090"
+    "openserver": "node \"./Util 01 - Custom Server/server.js\" 8090",
+    "prettier": "prettier --list-different '**/*.{json,js}'",
+    "prettier-fix": "prettier --write '**/*.{json,js}'",
+    "validate": "npm run eslint && npm run prettier"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -30,6 +41,8 @@
     "eslint-loader": "^2.1.0",
     "eslint-plugin-vue": "^4.7.1",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.0.0-rc.13",
+    "prettier": "^1.14.2",
     "vue-loader": "^15.4.1",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.17.2",

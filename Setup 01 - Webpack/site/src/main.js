@@ -7,7 +7,8 @@ import GreetingComponent from './GreetingComponent.vue';
 
 const component = new Vue({
   render: createElement => createElement(GreetingComponent),
-  renderError: (createElement, err) => createElement('pre', { style: { color: 'red' }}, err.stack),
+  renderError: (createElement, err) =>
+    createElement('pre', { style: { color: 'red' } }, err.stack)
 }).$mount();
 
 document.body.appendChild(component.$el);

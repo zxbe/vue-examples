@@ -32,7 +32,9 @@ function findFileInPath(directory, file) {
     return filename;
   } else {
     const basename = path.dirname(directory);
-    return basename && basename !== directory ? findFileInPath(basename, file) : null;
+    return basename && basename !== directory
+      ? findFileInPath(basename, file)
+      : null;
   }
 }
 
@@ -47,13 +49,14 @@ if (fs.statSync(filePath).isDirectory()) {
     // Webpack config exists, so execute webpack
     console.log('webpack');
     childProcess.spawnSync(
-      'webpack-dev-server', 
-      ['--config', `"${webpackConfigPath}"`], 
+      'webpack-dev-server',
+      ['--config', `"${webpackConfigPath}"`],
       {
         cwd: path.dirname(webpackConfigPath),
-        shell: true, 
+        shell: true,
         stdio: 'inherit'
-      });
+      }
+    );
     console.log('webpack done');
     process.exit();
   }
@@ -73,9 +76,15 @@ const totalUri = `${serverUri}${extraUri}`;
 
 // Start server
 // See: https://github.com/indexzero/http-server/
-const httpChild = childProcess.spawn('http-server', ['.', '-p', portHttp, '-c-1'], {shell: true, stdio: 'inherit'});
+const httpChild = childProcess.spawn(
+  'http-server',
+  ['.', '-p', portHttp, '-c-1'],
+  { shell: true, stdio: 'inherit' }
+);
 
 // Open browser
-const command = process.platform === 'win32' ? `start "" "${totalUri}"` :
-              /* process.platform === "darwin" */ `open "${totalUri}"`;
+const command =
+  process.platform === 'win32'
+    ? `start "" "${totalUri}"`
+    : /* process.platform === "darwin" */ `open "${totalUri}"`;
 childProcess.exec(command);

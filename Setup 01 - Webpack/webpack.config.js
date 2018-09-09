@@ -11,42 +11,39 @@ module.exports = {
   entry: './site/src/main.js',
   output: {
     path: __dirname + '/site/dist',
-    filename: "bundle.js",
+    filename: 'bundle.js'
   },
   devtool: 'source-map',
   devServer: {
     contentBase: './site/dist',
     port: 9000,
     hot: true,
-    open: true,
+    open: true
   },
   mode: 'development',
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-        ],
+        use: ['vue-style-loader', 'css-loader']
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: 'babel-loader'
       },
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-      },
-    ],
+        loader: 'vue-loader'
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Setup - Webpack',
+      title: 'Setup - Webpack'
     }),
     new VueLoaderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
-  ],
+    new webpack.NamedModulesPlugin()
+  ]
 };
