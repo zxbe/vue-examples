@@ -15,6 +15,7 @@ module.exports = {
   extends: ['plugin:vue/recommended'],
   rules: {
     'no-debugger': 'warn',
-    semi: [2, 'always']
+    semi: [2, 'always'],
+    'vue/require-prop-types': 'warn'
   }
 };
