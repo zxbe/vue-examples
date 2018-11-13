@@ -6,14 +6,14 @@
   <meta charset="utf-8" />
   <meta name="author" content="Rick Beerendonk">
 
-  <title>List Rendering - For with Index</title>
-  <link rel="stylesheet" href="../../../resources/oblicum.css">
+  <title>List Rendering - Object - For</title>
+  <link rel="stylesheet" href="../../../../resources/oblicum.css">
 </head>
 <body>
   <div id="app">
     <ul>
-      <li v-for="(item, index) in items">
-        {{index}}. {{ item }}
+      <li v-for="value in object">
+        {{ value }}
       </li>
     </ul>
   </div>
