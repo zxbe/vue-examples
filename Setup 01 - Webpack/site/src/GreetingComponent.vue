@@ -2,12 +2,18 @@
 <!-- Copyright © 2018 Rick Beerendonk   -->
 
 <template>
-  <h1>Hello World!</h1>
+  <h1>Hello {{name}}!</h1>
 </template>
 
 <script>
 export default {
-  name: 'GreetingComponent'
+  name: 'GreetingComponent',
+  props: {
+    name: {
+      type: String,
+      default: 'World'
+    }
+  }
 };
 </script>
 
