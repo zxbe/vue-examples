@@ -1,6 +1,6 @@
 {
-  "name": "vue-hmr-eslint-webpack-babel",
-  "description": "Using Vue with Hot Module Replacement, ESLint, Webpack & Babel",
+  "name": "vue-hmr-eslint-webpack-babel-storybook",
+  "description": "Using Vue with Hot Module Replacement, ESLint, Webpack, Babel & Storybook",
   "version": "1.0.0",
   "repository": {
     "type": "git",
@@ -9,30 +9,30 @@
   "author": "Rick Beerendonk",
   "license": "MPL-2.0",
   "devDependencies": {
-    "@babel/cli": "^7.2.0",
-    "@babel/core": "^7.2.0",
-    "@babel/polyfill": "^7.0.0",
-    "@babel/preset-env": "^7.2.0",
-    "@storybook/vue": "^4.0.12",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.3",
+    "@storybook/vue": "^4.1.3",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
-    "babel-preset-vue": "^2.0.2",
     "babel-plugin-transform-optional-catch-binding": "^7.0.0-alpha.16",
-    "css-loader": "^1.0.1",
+    "babel-preset-vue": "^2.0.2",
+    "css-loader": "^2.0.2",
     "eslint": "^5.10.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-vue": "^5.0.0",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "next",
     "vue-loader": "^15.4.2",
-    "vue-template-compiler": "^2.5.19",
-    "webpack": "^4.28.0",
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "next",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.1.12"
   },
   "dependencies": {
     "http-server": "^0.11.1",
     "http-vue-loader": "^1.3.5",
-    "vue": "^2.5.19"
+    "vue": "^2.5.21"
   },
   "scripts": {
     "build": "webpack",
