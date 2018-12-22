@@ -43,7 +43,6 @@ module.exports = {
       title: 'Setup - Webpack'
     }),
     new VueLoaderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin()
+    new webpack.HotModuleReplacementPlugin()
   ]
 };
