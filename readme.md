@@ -15,4 +15,4 @@ Download: https://github.com/vuejs/vue-devtools
 
 Mozilla Public License Version 2.0
 
-Copyright © 2018 Rick Beerendonk
+Copyright © 2018-2019 Rick Beerendonk
