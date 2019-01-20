@@ -7,12 +7,14 @@ To open examples you'll need to install various libraries:
 1. Open command line in the root folder
 2. Run `npm install`
 
-# Developer Tools
+## Developer Tools
 
 Download: https://github.com/vuejs/vue-devtools
 
-# Licence
+## Licence
 
-Mozilla Public License Version 2.0
+European Union Public Licence version 1.2
+
+## Copyright
 
 Copyright © 2018-2019 Rick Beerendonk

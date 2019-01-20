@@ -1,5 +1,5 @@
-/*! Mozilla Public License Version 2.0 !*/
-/*! Copyright © 2018 Rick Beerendonk   !*/
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2018 Rick Beerendonk          !*/
 
 /* eslint vue/require-prop-types: "off" */
 /* eslint vue/require-default-prop: "off" */
