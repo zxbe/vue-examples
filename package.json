@@ -24,8 +24,8 @@
     "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
     "open": "open",
     "openserver": "node \"./Util 01 - Custom Server/server.js\" 8090",
-    "prettier": "prettier --list-different '**/*.{json,js}'",
-    "prettier-fix": "prettier --write '**/*.{json,js}'",
+    "prettier": "prettier --list-different '**/*.{json,js,html}'",
+    "prettier-fix": "prettier --write '**/*.{json,js,html}'",
     "validate": "npm run eslint && npm run prettier"
   },
   "devDependencies": {
