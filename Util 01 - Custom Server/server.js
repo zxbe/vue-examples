@@ -48,6 +48,7 @@ if (fs.statSync(filePath).isDirectory()) {
   if (webpackConfigPath) {
     // Webpack config exists, so execute webpack
     console.log('webpack');
+    console.log('webpack config: ' + webpackConfigPath);
     childProcess.spawnSync(
       'webpack-dev-server',
       ['--config', `"${webpackConfigPath}"`],
