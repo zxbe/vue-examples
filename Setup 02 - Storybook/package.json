@@ -19,7 +19,7 @@
     "babel-plugin-transform-optional-catch-binding": "^7.0.0-alpha.16",
     "babel-preset-vue": "^2.0.2",
     "css-loader": "^2.1.0",
-    "eslint": "^5.12.1",
+    "eslint": "^5.13.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-vue": "^5.1.0",
     "html-webpack-plugin": "next",
