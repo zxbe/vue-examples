@@ -20,19 +20,19 @@
     "babel-preset-vue": "^2.0.2",
     "css-loader": "^2.1.0",
     "eslint": "^5.13.0",
-    "eslint-loader": "^2.1.1",
+    "eslint-loader": "^2.1.2",
     "eslint-plugin-vue": "^5.1.0",
     "html-webpack-plugin": "next",
     "vue-loader": "^15.6.2",
-    "vue-template-compiler": "^2.6.0",
-    "webpack": "^4.29.1",
-    "webpack-cli": "^3.2.1",
+    "vue-template-compiler": "^2.6.3",
+    "webpack": "^4.29.2",
+    "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
     "http-server": "^0.11.1",
     "http-vue-loader": "^1.4.0",
-    "vue": "^2.6.0"
+    "vue": "^2.6.3"
   },
   "scripts": {
     "build": "webpack",
