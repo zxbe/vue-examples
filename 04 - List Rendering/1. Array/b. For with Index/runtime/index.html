@@ -11,9 +11,9 @@
   </head>
   <body>
     <div id="app">
-      <ul>
-        <li v-for="(item, index) in items">{{index}}. {{ item }}</li>
-      </ul>
+      <ol>
+        <li v-for="(item, index) in items" :value="index">{{ item }}</li>
+      </ol>
     </div>
 
     <script type="module" src="main.js"></script>
