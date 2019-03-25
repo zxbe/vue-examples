@@ -2,6 +2,10 @@
 
 Examples for [Vue.js](https://vuejs.org).
 
+![](https://img.shields.io/github/license/rickbeerendonk/vue-examples.svg)
+
+## Run
+
 To open examples you'll need to install various libraries:
 
 1. Open command line in the root folder
