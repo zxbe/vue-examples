@@ -40,7 +40,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Setup - Webpack'
+      title: 'Storybook - Setup - Static Loading'
     }),
     new VueLoaderPlugin(),
     new webpack.HotModuleReplacementPlugin()

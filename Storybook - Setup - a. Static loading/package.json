@@ -1,6 +1,6 @@
 {
-  "name": "vue-hmr-eslint-webpack-babel-storybook",
-  "description": "Using Vue with Hot Module Replacement, ESLint, Webpack, Babel & Storybook",
+  "name": "vue-storybook-static-loading",
+  "description": "Using Vue & Storybook with Static Loading",
   "version": "1.0.0",
   "repository": {
     "type": "git",
