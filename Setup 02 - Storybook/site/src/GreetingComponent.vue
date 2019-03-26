@@ -11,7 +11,7 @@ export default {
   props: {
     name: {
       type: String,
-      default: 'World',
+      default: '<default>',
       required: false
     }
   }
