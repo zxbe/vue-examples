@@ -1,6 +1,6 @@
 import { configure } from '@storybook/vue';
 
-const req = require.context('../site/src', true, /\.stories\.js$/);
+const req = require.context('../src', true, /\.stories\.js$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));

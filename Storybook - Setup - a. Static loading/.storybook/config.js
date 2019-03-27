@@ -1,7 +1,7 @@
 import { configure } from '@storybook/vue';
 
 function loadStories() {
-  require('../site/src/stories');
+  require('../src/stories');
   // You can require as many stories as you need.
 }
 

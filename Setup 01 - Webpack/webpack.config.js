@@ -7,14 +7,14 @@ const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
   context: __dirname,
-  entry: './site/src/main.js',
+  entry: './src/main.js',
   output: {
-    path: __dirname + '/site/dist',
+    path: __dirname + '/dist',
     filename: 'bundle.js'
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: './site/dist',
+    contentBase: './dist',
     port: 9100,
     hot: true
   },
