@@ -1,6 +1,7 @@
 # Other Vue users
 
-* See: https://www.netguru.com/blog/13-top-companies-that-have-trusted-vue.js-examples-of-applications
+* https://www.netguru.com/blog/13-top-companies-that-have-trusted-vue.js-examples-of-applications
+* https://github.com/vuejs/awesome-vue#projects-using-vuejs
 
 ## Copyright
 
