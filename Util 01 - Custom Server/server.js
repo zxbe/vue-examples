@@ -43,8 +43,11 @@ function findFileInPath(directory, file) {
 /// Is Webpack project? ///
 
 if (fs.statSync(filePath).isDirectory()) {
-  const webpackConfigName = 'webpack.config.js';
-  const webpackConfigPath = findFileInPath(filePath, webpackConfigName);
+  const webpackConfigNames = ['webpack.config.js', 'webpack.dev.js'];
+  const webpackConfigPath = webpackConfigNames.reduce(
+    (path, name) => path || findFileInPath(filePath, name),
+    null
+  );
   if (webpackConfigPath) {
     // Webpack config exists, so execute webpack
     console.log('webpack');
