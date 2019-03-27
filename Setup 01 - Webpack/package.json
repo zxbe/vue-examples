@@ -35,6 +35,8 @@
   "scripts": {
     "build": "webpack",
     "build-watch": "webpack --watch",
+    "eslint": "eslint . --ext .js,.jsx --cache",
+    "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
     "start": "webpack-dev-server"
   }
 }
