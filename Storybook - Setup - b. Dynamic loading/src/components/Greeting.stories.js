@@ -2,7 +2,7 @@ import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 
 // Import your custom components.
-import Greeting from '../components/Greeting.vue';
+import Greeting from './Greeting.vue';
 
 // Register custom components.
 Vue.component('Greeting', Greeting);

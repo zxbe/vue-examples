@@ -3,12 +3,10 @@
 
 import Vue from 'vue';
 
-import GreetingComponent from './GreetingComponent.vue';
+import App from './App.vue';
 
 const component = new Vue({
-  render: createElement => createElement(GreetingComponent),
-  renderError: (createElement, err) =>
-    createElement('pre', { style: { color: 'red' } }, err.stack)
+  render: h => h(App)
 }).$mount();
 
 document.body.appendChild(component.$el);
