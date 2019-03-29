@@ -27,7 +27,7 @@ export default {
   methods: {
     changed: function(value) {
       console.log(this);
-      this.$data.name = value;
+      this.name = value;
     }
   }
 };
