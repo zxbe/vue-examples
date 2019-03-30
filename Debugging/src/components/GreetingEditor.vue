@@ -26,7 +26,6 @@ export default {
   }),
   methods: {
     changed: function(value) {
-      console.log(this);
       this.name = value;
     }
   }
