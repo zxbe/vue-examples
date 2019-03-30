@@ -19,10 +19,11 @@
     "babel-plugin-transform-optional-catch-binding": "^7.0.0-alpha.16",
     "babel-preset-vue": "^2.0.2",
     "css-loader": "^2.1.1",
-    "eslint": "^5.15.3",
+    "eslint": "^5.16.0",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-vue": "^5.2.2",
     "html-webpack-plugin": "next",
+    "vue-eslint-parser": "^6.0.3",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.29.6",
@@ -39,6 +40,6 @@
     "build-watch": "webpack --watch",
     "start": "webpack-dev-server",
     "storybook": "start-storybook -p 9101 -c .storybook",
-    "storybook-build": "build-storybook -c .storybook -o build-storybook"
+    "storybook-build": "build-storybook -c .storybook -o dist-storybook"
   }
 }

@@ -17,10 +17,11 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-optional-catch-binding": "^7.0.0-alpha.16",
     "css-loader": "^2.1.1",
-    "eslint": "^5.15.3",
+    "eslint": "^5.16.0",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-vue": "^5.2.2",
     "html-webpack-plugin": "next",
+    "vue-eslint-parser": "^6.0.3",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.29.6",
@@ -35,8 +36,8 @@
   "scripts": {
     "build": "webpack",
     "build-watch": "webpack --watch",
-    "eslint": "eslint . --ext .js,.jsx --cache",
-    "eslint-fix": "eslint . --ext .js,.jsx --cache --fix",
+    "eslint": "eslint . --ext .js,.jsx,.vue --cache",
+    "eslint-fix": "eslint . --ext .js,.jsx,.vue --cache --fix",
     "start": "webpack-dev-server --open",
     "start-debug": "webpack-dev-server"
   }

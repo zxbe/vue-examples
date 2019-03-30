@@ -9,7 +9,7 @@ const fs = require('fs');
 const path = require('path');
 
 const portHttp = process.argv[2] || 8080;
-const portRest = +portHttp + 1;
+//const portRest = +portHttp + 1;
 let filePath = process.argv[3];
 const basePath = process.cwd();
 
@@ -80,7 +80,7 @@ const totalUri = `${serverUri}${extraUri}`;
 
 // Start server
 // See: https://github.com/indexzero/http-server/
-const httpChild = childProcess.spawn(
+/* const httpChild = */ childProcess.spawn(
   'http-server',
   ['.', '-p', portHttp, '-c-1'],
   { shell: true, stdio: 'inherit' }
