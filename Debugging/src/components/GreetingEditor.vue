@@ -3,10 +3,7 @@
 
 <template>
   <div>
-    <EditBox 
-      :value="name" 
-      @change="changed"
-    />
+    <EditBox :value="name" @change="changed" />
     <Greeting :name="name" />
   </div>
 </template>
@@ -19,7 +16,7 @@ export default {
   name: 'GreetingEditor',
   components: {
     EditBox,
-    Greeting,
+    Greeting
   },
   data: () => ({
     name: 'World'
@@ -32,5 +29,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

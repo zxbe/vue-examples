@@ -2,10 +2,7 @@
 <!-- Copyright © 2019 Rick Beerendonk          -->
 
 <template>
-  <input 
-    :value="value"
-    @change="changed"
-  >
+  <input :value="value" @change="changed" />
 </template>
 
 <script>
@@ -25,5 +22,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

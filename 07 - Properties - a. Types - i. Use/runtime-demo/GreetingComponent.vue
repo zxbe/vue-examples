@@ -13,9 +13,8 @@
 // @vue/component
 module.exports = {
   name: 'GreetingComponent',
-  props: {name: String}
+  props: { name: String }
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

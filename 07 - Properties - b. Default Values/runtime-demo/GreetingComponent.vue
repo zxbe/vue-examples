@@ -12,9 +12,8 @@
 // @vue/component
 module.exports = {
   name: 'GreetingComponent',
-  props: { name: { type: String, default: 'World' } },
+  props: { name: { type: String, default: 'World' } }
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

@@ -24,7 +24,7 @@
 // @vue/component
 module.exports = {
   name: 'MyComponent',
-  props: { 
+  props: {
     str: String,
     num: Number,
     bool: Boolean,
@@ -37,5 +37,4 @@ module.exports = {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
