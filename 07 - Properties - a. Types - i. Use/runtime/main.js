@@ -8,7 +8,6 @@ import GreetingComponent from './GreetingComponent.js';
 // Bootstrap
 new Vue({
   el: '#app',
-  // Register component locally
   components: {
     'greeting-component': GreetingComponent
   }

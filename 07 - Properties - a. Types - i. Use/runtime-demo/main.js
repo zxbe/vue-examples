@@ -8,7 +8,6 @@ const GreetingComponent = httpVueLoader('./GreetingComponent.vue');
 // Bootstrap
 new Vue({
   el: '#app',
-  // Register component locally
   components: {
     'greeting-component': GreetingComponent
   }

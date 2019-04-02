@@ -8,7 +8,6 @@ import MyComponent from './MyComponent.js';
 // Bootstrap
 new Vue({
   el: '#app',
-  // Register component locally
   components: {
     'my-component': MyComponent
   }
