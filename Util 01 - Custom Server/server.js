@@ -79,10 +79,15 @@ const totalUri = `${serverUri}${extraUri}`;
 //console.log('totalUri: ' + totalUri);
 
 // Start server
-// See: https://github.com/indexzero/http-server/
+// See: https://www.npmjs.com/package/serve
 /* const httpChild = */ childProcess.spawn(
-  'http-server',
-  ['.', '-p', portHttp, '-c-1'],
+  'serve',
+  [
+    '--listen',
+    portHttp,
+    '--config',
+    '".\\Util 01 - Custom Server\\serve.json"'
+  ],
   { shell: true, stdio: 'inherit' }
 );
 
