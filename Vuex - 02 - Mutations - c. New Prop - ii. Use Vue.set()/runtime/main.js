@@ -10,7 +10,9 @@ import { addToList } from './helpers.js';
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
-  state: {},
+  state: {
+    obj: {}
+  },
   mutations: {
     setNewProp(state, payload) {
       // Use Vue.set() for Reactivity

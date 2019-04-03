@@ -11,11 +11,13 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    newProp: null // Initialize for Reactivity
+    obj: {
+      newProp: null // Initialize for Reactivity
+    }
   },
   mutations: {
     setNewProp(state, payload) {
-      state.newProp = payload;
+      state.obj.newProp = payload;
     }
   }
 });
