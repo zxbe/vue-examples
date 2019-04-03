@@ -29,10 +29,10 @@
     "validate": "npm run eslint && npm run prettier"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.4.0",
-    "@babel/polyfill": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-optional-catch-binding": "^7.0.0-alpha.16",
@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "http-vue-loader": "^1.4.0",
-    "serve": "^10.1.2",
+    "serve": "^11.0.0",
     "vue": "^2.6.10"
   }
 }
