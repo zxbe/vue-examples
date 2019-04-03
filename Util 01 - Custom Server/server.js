@@ -70,7 +70,10 @@ if (fs.statSync(filePath).isDirectory()) {
 
 const serverUri = `http://localhost:${portHttp}`;
 const extraPath = filePath.substring(basePath.length);
-const extraUri = extraPath.split('\\').join('/');
+const extraUri = extraPath
+  .split('\\')
+  .join('/')
+  .replace(/\/?$/, '/');
 const totalUri = `${serverUri}${extraUri}`;
 
 //console.log('serverUri: ' + serverUri);
