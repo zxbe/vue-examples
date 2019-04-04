@@ -9,4 +9,4 @@ new Vue({
     greeting: 'Hello World!'
   },
   template: '<div>{{ greeting }}</div>'
-}).$mount(document.getElementById('app'));
+}).$mount('#app');
