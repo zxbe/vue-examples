@@ -89,7 +89,7 @@ const totalUri = `${serverUri}${extraUri}`;
     '--listen',
     portHttp,
     '--config',
-    '".\\Util 01 - Custom Server\\serve.json"'
+    '".\\Util - 01 - Custom Server\\serve.json"'
   ],
   { shell: true, stdio: 'inherit' }
 );

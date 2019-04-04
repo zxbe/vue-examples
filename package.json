@@ -23,7 +23,7 @@
     "eslint": "eslint . --ext .js,.jsx,.vue --cache",
     "eslint-fix": "eslint . --ext .js,.jsx,.vue --cache --fix",
     "open": "open",
-    "openserver": "node \"./Util 01 - Custom Server/server.js\" 9002",
+    "openserver": "node \"./Util - 01 - Custom Server/server.js\" 9002",
     "prettier": "prettier --list-different '**/*.{json,js,html,vue}'",
     "prettier-fix": "prettier --write '**/*.{json,js,html,vue}'",
     "validate": "npm run eslint && npm run prettier"
