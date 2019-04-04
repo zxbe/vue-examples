@@ -9,12 +9,14 @@ import { addToList } from './helpers.js';
 // Always call this first.
 Vue.use(Vuex);
 
+const SET_NEW_PROP = 'SET_NEW_PROP';
+
 const store = new Vuex.Store({
   state: {
     obj: {}
   },
   mutations: {
-    setNewProp(state, payload) {
+    [SET_NEW_PROP](state, payload) {
       // Use Object Spread for Reactivity
       state.obj = { ...state.obj, newProp: payload };
     }
@@ -23,6 +25,6 @@ const store = new Vuex.Store({
 
 addToList(store.state);
 
-store.commit('setNewProp', 123);
+store.commit(SET_NEW_PROP, 123);
 
 addToList(store.state);
