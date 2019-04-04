@@ -15,9 +15,8 @@ new Vue({
     routes: [
       { path: '/', component: Home },
       { path: '/page1', component: Page1 },
-      { path: '/page2', name: 'second', component: Page2 },
-      { path: '/oldpage2', redirect: '/page2' },
-      { path: '/olderpage2', redirect: { name: 'second' } }
+      { path: '/page2', component: Page2 },
+      { path: '/oldpage2', redirect: '/page2' }
     ]
   })
 }).$mount('#app');
