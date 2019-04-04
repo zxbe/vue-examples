@@ -5,10 +5,11 @@ import Vue from '../../node_modules/vue/dist/vue.esm.browser.js';
 import Vuex from '../../node_modules/vuex/dist/vuex.esm.js';
 
 import { addToList } from './helpers.js';
-import { NAME_TO_LOWER_CASE } from './mutation-types.js';
 
 // Always call this first.
 Vue.use(Vuex);
+
+const NAME_TO_LOWER_CASE = 'NAME_TO_LOWER_CASE';
 
 const store = new Vuex.Store({
   state: {
