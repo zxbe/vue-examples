@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2019 Rick Beerendonk -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+
+    <title>Data Binding - Class</title>
+    <link rel="stylesheet" href="../../resources/oblicum.css" />
+
+    <style>
+      .static {
+        font-style: italic;
+      }
+
+      .dynamic1 {
+        font-variant: small-caps;
+      }
+
+      .dynamic2 {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <span
+        class="static"
+        v-bind:class="{ dynamic1: isDynamic1, dynamic2: isDynamic2 }"
+        v-on:click="clicked"
+      >
+        Hello
+      </span>
+      <span> </span>
+      <span
+        class="static"
+        :class="{ dynamic1: !isDynamic1, dynamic2: !isDynamic2 }"
+      >
+        Vue
+      </span>
+      <span>!</span>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
