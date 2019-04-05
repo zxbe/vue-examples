@@ -6,13 +6,13 @@
     <meta charset="utf-8" />
     <meta name="author" content="Rick Beerendonk" />
 
-    <title>Data Binding - Style</title>
+    <title>Data Binding - Style - In Template</title>
     <link rel="stylesheet" href="../../resources/oblicum.css" />
   </head>
   <body>
     <div id="app">
       <span
-        v-bind:style="{ 'font-style': fontStyle, 'text-decoration': textDecoration }"
+        v-bind:style="{ 'font-size': fontSize + 'px', 'font-style': fontStyle, 'text-decoration': textDecoration }"
       >
         Hello Vue!
       </span>
