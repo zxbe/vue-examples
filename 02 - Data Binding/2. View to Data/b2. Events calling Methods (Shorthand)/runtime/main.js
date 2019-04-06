@@ -8,8 +8,7 @@ new Vue({
   methods: {
     clicked: function(e) {
       alert(`Event handled.
-      Target: ${e.target}
-      Value: ${e.target.value}`);
+      Target: ${e.target}`);
     }
   }
 });
