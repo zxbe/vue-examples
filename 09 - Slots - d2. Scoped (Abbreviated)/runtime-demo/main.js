@@ -8,10 +8,10 @@ const ContainerComponent = httpVueLoader('./ContainerComponent.vue');
 // Bootstrap
 new Vue({
   el: '#app',
-  data: () => ({
-    source: 'Root'
-  }),
   components: {
     'container-component': ContainerComponent
-  }
+  },
+  data: () => ({
+    source: 'Root'
+  })
 });
