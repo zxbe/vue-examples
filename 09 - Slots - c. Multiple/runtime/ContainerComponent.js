@@ -5,6 +5,11 @@
 export default {
   name: 'ContainerComponent',
   template: `<div style="background-color: lightgray; padding: 10px">
+    The default item:
+    <div style="background-color: white; padding: 10px">
+      <slot></slot>
+      <slot name="default"></slot>
+    </div>
     The 1st item:
     <div style="background-color: white; padding: 10px">
       <slot name="first"></slot>
