@@ -6,11 +6,17 @@
     <meta charset="utf-8" />
     <meta name="author" content="Rick Beerendonk" />
 
-    <title>Filters - LowerCase</title>
+    <title>Filters - With Parameters - Date</title>
     <link rel="stylesheet" href="../../../../resources/oblicum.css" />
   </head>
   <body>
-    <div id="app">{{ 'Hello Lowercase' | lowercase }}</div>
+    <div id="app">
+      <ul>
+        <li>{{ moment | date() }}</li>
+        <li>{{ moment | date('nl-NL') }}</li>
+        <li>{{ moment | date('us-EN') }}</li>
+      </ul>
+    </div>
 
     <script type="module" src="main.js"></script>
   </body>

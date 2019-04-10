@@ -6,17 +6,11 @@
     <meta charset="utf-8" />
     <meta name="author" content="Rick Beerendonk" />
 
-    <title>Filters - Parameters - Date</title>
+    <title>Filters - Without Parameters - UpperCase</title>
     <link rel="stylesheet" href="../../../../resources/oblicum.css" />
   </head>
   <body>
-    <div id="app">
-      <ul>
-        <li>{{ moment | date() }}</li>
-        <li>{{ moment | date('nl-NL') }}</li>
-        <li>{{ moment | date('us-EN') }}</li>
-      </ul>
-    </div>
+    <div id="app">{{ 'Hello Uppercase' | uppercase }}</div>
 
     <script type="module" src="main.js"></script>
   </body>
