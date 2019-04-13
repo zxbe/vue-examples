@@ -4,14 +4,14 @@
   "description": "Examples for [Vue.js](https://vuejs.org).",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rickbeerendonk/react-examples.git"
+    "url": "git+https://github.com/rickbeerendonk/vue-examples.git"
   },
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",
   "bugs": {
-    "url": "https://github.com/rickbeerendonk/react-examples/issues"
+    "url": "https://github.com/rickbeerendonk/vue-examples/issues"
   },
-  "homepage": "https://github.com/rickbeerendonk/react-examples#readme",
+  "homepage": "https://github.com/rickbeerendonk/vue-examples#readme",
   "husky": {
     "hooks": {
       "pre-commit": "npm run validate"
