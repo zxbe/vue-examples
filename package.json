@@ -37,7 +37,7 @@
     "babel-plugin-transform-optional-catch-binding": "^7.0.0-alpha.16",
     "css-loader": "^2.1.1",
     "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-prettier": "^4.2.0",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-vue": "^5.2.2",
