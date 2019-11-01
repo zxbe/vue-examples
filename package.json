@@ -54,8 +54,8 @@
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
-    "http-vue-loader": "^1.4.0",
-    "serve": "^11.1.0",
+    "http-vue-loader": "^1.4.1",
+    "serve": "^11.2.0",
     "vue": "^2.6.10"
   }
 }
