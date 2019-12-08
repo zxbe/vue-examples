@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2019 Rick Beerendonk -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+
+    <title>Computed Properties - Computed Caching vs Methods</title>
+    <link rel="stylesheet" href="../../../resources/oblicum.css" />
+  </head>
+  <body>
+    <div id="app">
+      <p style="color: gray">
+        Observe the method counter always updates, but the computed property not
+        because it is cached.<br />
+        Both have the same dependency (Counter 1 only).
+      </p>
+
+      <h1 v-on:click="count1++">Counter 1: Clicked {{count1}} times!</h1>
+      <h1 v-on:click="count2++">Counter 2: Clicked {{count2}} times!</h1>
+
+      <ul style="font-variant-numeric: tabular-nums">
+        <li>{{ computedCount1 }} = Computed property last update</li>
+        <li>{{ methodCount1() }} = Method last update</li>
+      </ul>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
