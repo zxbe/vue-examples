@@ -12,12 +12,8 @@
   <body>
     <div id="app">
       <container-component>
-        <template v-slot:first
-          >{{ source }}</template
-        >
-        <template v-slot:second="slotProps"
-          >{{ slotProps.source }}</template
-        >
+        <template v-slot:first>{{ source }}</template>
+        <template v-slot:second="slotProps">{{ slotProps.source }}</template>
       </container-component>
     </div>
 

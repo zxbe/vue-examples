@@ -5,9 +5,6 @@ import Vue from '../../../node_modules/vue/dist/vue.esm.browser.js';
 
 new Vue({
   el: '#app',
-  data: {
-    moment: new Date()
-  },
   filters: {
     date: function(value, locales) {
       if (!value) {
@@ -16,5 +13,8 @@ new Vue({
 
       return value.toLocaleDateString(locales);
     }
+  },
+  data: {
+    moment: new Date()
   }
 });

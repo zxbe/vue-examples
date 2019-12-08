@@ -6,7 +6,6 @@
 </template>
 
 <script>
-/* global module */
 /* eslint vue/require-prop-types: "off" */
 /* eslint vue/require-default-prop: "off" */
 

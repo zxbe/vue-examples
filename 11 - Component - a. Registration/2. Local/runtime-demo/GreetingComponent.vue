@@ -6,8 +6,6 @@
 </template>
 
 <script>
-/* global module */
-
 // @vue/component
 module.exports = {
   name: 'GreetingComponent'
