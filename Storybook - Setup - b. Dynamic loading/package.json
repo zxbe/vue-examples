@@ -33,7 +33,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "http-server": "^0.11.1",
+    "http-server": "^0.12.0",
     "http-vue-loader": "^1.4.1",
     "vue": "^2.6.10"
   },
