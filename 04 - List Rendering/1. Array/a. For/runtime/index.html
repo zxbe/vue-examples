@@ -11,9 +11,15 @@
   </head>
   <body>
     <div id="app">
+      <!-- in -->
       <ul>
         <li v-for="item in items">{{ item }}</li>
       </ul>
+
+      <!-- of (equal as in, but closer to for-of in EcmaScript) -->
+      <ol>
+        <li v-for="item of items">{{ item }}</li>
+      </ol>
     </div>
 
     <script type="module" src="main.js"></script>
