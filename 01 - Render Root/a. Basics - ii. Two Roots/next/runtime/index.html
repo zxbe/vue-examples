@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2020 Rick Beerendonk -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+
+    <title>Render Root - Basics - Two Roots</title>
+    <link rel="stylesheet" href="../../../../resources/oblicum.css" />
+    <script src="../../../../node_modules/vue3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <div id="app1">{{ message }}</div>
+    <div id="app2">{{ message }}</div>
+
+    <script>
+      Vue.createApp().mount(
+        {
+          data: {
+            message: `1st Vue Root`
+          }
+        },
+        '#app1'
+      );
+
+      Vue.createApp().mount(
+        {
+          data: {
+            message: `2nd Vue Root`
+          }
+        },
+        '#app2'
+      );
+    </script>
+  </body>
+</html>
