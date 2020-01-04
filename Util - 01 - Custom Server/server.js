@@ -99,4 +99,7 @@ const command =
   process.platform === 'win32'
     ? `start "" "${totalUri}"`
     : /* process.platform === "darwin" */ `open "${totalUri}"`;
-childProcess.exec(command);
+// Use timeout so the server is ready.
+setTimeout(function() {
+  childProcess.exec(command);
+}, 200);
