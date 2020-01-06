@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2020 Rick Beerendonk -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+
+    <title>Data Binding - Class - Array Syntax - with Toggle</title>
+    <link rel="stylesheet" href="../../../../resources/oblicum.css" />
+
+    <style>
+      .static {
+        font-style: italic;
+      }
+
+      .dynamic1 {
+        font-variant: small-caps;
+      }
+
+      .dynamic2 {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!--
+        1. Class dynamic1 with inline if
+        2. Class dynamic2 with object syntax (in array syntax)
+      -->
+      <h1
+        class="static"
+        v-bind:class="[isDynamic1 ? 'dynamic1' : '', {dynamic2: isDynamic2}]"
+        v-on:click="clicked"
+      >
+        Hello Vue!
+      </h1>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
