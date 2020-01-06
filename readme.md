@@ -15,6 +15,10 @@ To open examples you'll need to install various libraries:
 
 Download: https://github.com/vuejs/vue-devtools
 
+### Visual Studio Code
+
+Plugin: https://marketplace.visualstudio.com/items?itemName=octref.vetur
+
 ## Licence
 
 European Union Public Licence version 1.2
