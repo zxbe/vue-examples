@@ -1,0 +1,1 @@
+Think about registration through modules.
