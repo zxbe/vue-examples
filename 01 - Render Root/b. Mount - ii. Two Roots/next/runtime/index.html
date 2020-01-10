@@ -6,22 +6,32 @@
     <meta charset="utf-8" />
     <meta name="author" content="Rick Beerendonk" />
 
-    <title>Render Root - Basics - One Root</title>
+    <title>Render Root - Mount - Two Roots</title>
     <link rel="stylesheet" href="../../../../resources/oblicum.css" />
     <script src="../../../../node_modules/vue-next/dist/vue.global.js"></script>
   </head>
 
   <body>
-    <div id="app">{{ greeting }}</div>
+    <div id="app1">{{ message }}</div>
+    <div id="app2">{{ message }}</div>
 
     <script>
       Vue.createApp().mount(
         {
           data: {
-            greeting: `Hello Vue ${Vue.version}!`
+            message: `1st Vue Root`
           }
         },
-        '#app'
+        '#app1'
+      );
+
+      Vue.createApp().mount(
+        {
+          data: {
+            message: `2nd Vue Root`
+          }
+        },
+        '#app2'
       );
     </script>
   </body>

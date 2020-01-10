@@ -6,12 +6,23 @@
     <meta charset="utf-8" />
     <meta name="author" content="Rick Beerendonk" />
 
-    <title>Render Root - Basics - One Root</title>
+    <title>Render Root - Mount - One Root</title>
     <link rel="stylesheet" href="../../../../resources/oblicum.css" />
+    <script src="../../../../node_modules/vue-next/dist/vue.global.js"></script>
   </head>
+
   <body>
     <div id="app">{{ greeting }}</div>
 
-    <script type="module" src="main.js"></script>
+    <script>
+      Vue.createApp().mount(
+        {
+          data: {
+            greeting: `Hello Vue ${Vue.version}!`
+          }
+        },
+        '#app'
+      );
+    </script>
   </body>
 </html>
