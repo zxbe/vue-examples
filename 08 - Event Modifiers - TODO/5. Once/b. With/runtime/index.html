@@ -6,15 +6,14 @@
     <meta charset="utf-8" />
     <meta name="author" content="Rick Beerendonk" />
 
-    <title>Event Modifiers - Prevent</title>
-    <link rel="stylesheet" href="../../../resources/oblicum.css" />
+    <title>Event Modifiers - Once - With</title>
+    <link rel="stylesheet" href="../../../../resources/oblicum.css" />
   </head>
   <body>
     <div id="app">
-      <form v-on:submit.prevent>
-        <p>{{ date }}</p>
-        <button>Submit</button>
-      </form>
+      <h1 @click.once="count++">
+        This has been clicked {{count}} times!
+      </h1>
     </div>
 
     <script type="module" src="main.js"></script>
