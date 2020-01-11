@@ -4,8 +4,11 @@
 import Vue from '../../../../node_modules/vue/dist/vue.esm.browser.js';
 
 new Vue({
-  el: '#app',
+  template: `<div>Hello Vue ${Vue.version}!</div>`
+}).$mount('#app1'); // <div id="app1"></div>
+
+new Vue({
   data: {
     greeting: `Hello Vue ${Vue.version}!`
   }
-});
+}).$mount('#app2'); // <div id="app2">{{ greeting }}</div>
