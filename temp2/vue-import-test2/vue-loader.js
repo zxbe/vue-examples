@@ -77,8 +77,12 @@ class StyleContext extends ElemContext {
 
     document.head.appendChild(this.elem);
 
-    if (scoped) debugger;
-    this.scopeStyles(this.elem.sheet, '[' + this.component.getScopeId() + ']');
+    if (scoped) {
+      this.scopeStyles(
+        this.elem.sheet,
+        '[' + this.component.getScopeId() + ']'
+      );
+    }
 
     return Promise.resolve();
   }
