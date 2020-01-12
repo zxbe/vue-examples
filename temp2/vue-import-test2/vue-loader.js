@@ -1,3 +1,11 @@
+// @ts-check
+
+/**
+ *
+ * @param {string} baseURL
+ * @param {string} url
+ * @returns {string}
+ */
 function resolveURL(baseURL, url) {
   if (url.startsWith('./') || url.startsWith('../')) {
     return baseURL + url;
@@ -6,15 +14,26 @@ function resolveURL(baseURL, url) {
 }
 
 class ElemContext {
+  /**
+   *
+   * @param {Component} component
+   * @param {Element} elem
+   */
   constructor(component, elem) {
     this.component = component;
     this.elem = elem;
   }
 
+  /**
+   * @returns {string}
+   */
   get content() {
     return this.elem.innerHTML;
   }
 
+  /**
+   * @param {string} content
+   */
   set content(content) {
     this.elem.innerHTML = content;
   }
@@ -58,17 +77,19 @@ class StyleContext extends ElemContext {
 
     document.head.appendChild(this.elem);
 
-    if (scoped)
-      this.scopeStyles(
-        this.elem.sheet,
-        '[' + this.component.getScopeId() + ']'
-      );
+    if (scoped) debugger;
+    this.scopeStyles(this.elem.sheet, '[' + this.component.getScopeId() + ']');
 
     return Promise.resolve();
   }
 }
 
 class ScriptContext extends ElemContext {
+  /**
+   *
+   * @param {Component} component
+   * @param {Element} elem
+   */
   constructor(component, elem) {
     super(component, elem);
     this.module = {
@@ -134,12 +155,19 @@ class TemplateContext extends ElemContext {
     return null;
   }
 
+  /**
+   * @returns {Promise<void>}
+   */
   compile() {
     return Promise.resolve();
   }
 }
 
 class Component {
+  /**
+   *
+   * @param {string=} name
+   */
   constructor(name) {
     this.name = name;
     this.template = null;
@@ -156,6 +184,10 @@ class Component {
     return this._scopeId;
   }
 
+  /**
+   *
+   * @param {string} url
+   */
   load(url) {
     return vueLoader.httpRequest(url).then(responseText => {
       this.baseURI = url.substr(0, url.lastIndexOf('/') + 1);
@@ -216,6 +248,9 @@ class Component {
       });
   }
 
+  /**
+   * @returns {Promise<Component>}
+   */
   normalize() {
     return Promise.all(
       Array.prototype.concat(
@@ -230,6 +265,9 @@ class Component {
     );
   }
 
+  /**
+   * @returns {Promise<Component>}
+   */
   compile() {
     return Promise.all(
       Array.prototype.concat(
@@ -264,6 +302,11 @@ function parseComponentURL(url) {
   };
 }
 
+/**
+ *
+ * @param {string} url
+ * @param {string=} name
+ */
 vueLoader.load = function(url, name) {
   return function() {
     return new Component(name)
@@ -304,7 +347,7 @@ vueLoader.install = function(Vue) {
           components[componentName].startsWith(urlPrefix)
         ) {
           const comp = parseComponentURL(
-            components[componentName].substr(urlPrefix.lengh)
+            components[componentName].substr(urlPrefix.length)
           );
 
           const componentURL =
