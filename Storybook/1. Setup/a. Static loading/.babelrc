@@ -1,9 +1,4 @@
 {
-  "presets": [
-    "@babel/preset-env",
-    "vue"
-  ],
-  "plugins": [
-    "transform-optional-catch-binding"
-  ]
+  "presets": ["@babel/preset-env", "vue"],
+  "plugins": []
 }

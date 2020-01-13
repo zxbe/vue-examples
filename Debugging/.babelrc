@@ -1,8 +1,4 @@
 {
-  "presets": [
-    "@babel/preset-env"
-  ],
-  "plugins": [
-    "transform-optional-catch-binding"
-  ]
+  "presets": ["@babel/preset-env"],
+  "plugins": []
 }
