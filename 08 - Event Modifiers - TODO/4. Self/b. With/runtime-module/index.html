@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2020 Rick Beerendonk -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+
+    <title>Event Modifiers - Self - With</title>
+    <link rel="stylesheet" href="../../../../resources/oblicum.css" />
+  </head>
+  <body>
+    <p style="color: gray">
+      <u>Open the console.</u><br />
+      Observe that when clicking the child, the parent's onClick handler IS NOT
+      triggered.
+    </p>
+    <div id="app">
+      <div id="parent" @click.self="parentClicked">
+        Parent
+        <div id="child" @click.self="childClicked">Child</div>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
