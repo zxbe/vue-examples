@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2020 Rick Beerendonk -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+
+    <title>Event Modifiers - Capture - With</title>
+    <link rel="stylesheet" href="../../../../resources/oblicum.css" />
+  </head>
+  <body>
+    <p style="color: gray">
+      <u>Open the console.</u><br />
+      Observe that when clicking the child, the parent's onClick handler
+      <b><i>with .capture</i></b> is triggered BEFORE the child.
+    </p>
+    <div id="app">
+      <div
+        id="parent"
+        @click.capture="parentCapturingClicked"
+        @click.self="parentAtTargetClicked"
+        @click="parentBubblingClicked"
+      >
+        Parent
+        <div id="child" @click="childClicked">Child</div>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
