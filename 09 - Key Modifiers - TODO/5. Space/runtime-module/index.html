@@ -8,10 +8,16 @@
 
     <title>Key Modifiers - Space</title>
     <link rel="stylesheet" href="../../../../resources/oblicum.css" />
+
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <div id="app">
-      <input v-on:keyup.space="keyup" />
+    <div id="app" v-cloak>
+      <input autofocus v-on:keyup.space="keyup" />
       <pre>{{result}}</pre>
     </div>
 
