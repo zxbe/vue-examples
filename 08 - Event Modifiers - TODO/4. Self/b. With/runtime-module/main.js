@@ -12,7 +12,10 @@ new Vue({
       );
     },
     childClicked: function(event) {
-      console.log(`${event.target.id} received event.`);
+      console.log(`${event.target.id} received event (Standard).`);
+    },
+    childSelfClicked: function(event) {
+      console.log(`${event.target.id} received event (Self).`);
     }
   }
 });

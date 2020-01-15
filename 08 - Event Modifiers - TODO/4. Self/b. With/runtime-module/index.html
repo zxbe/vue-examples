@@ -18,7 +18,10 @@
     <div id="app">
       <div id="parent" @click.self="parentClicked">
         Parent
-        <div id="child" @click.self="childClicked">Child</div>
+        <!-- Order of @click.self and @click matters. -->
+        <div id="child" @click.self="childSelfClicked1" @click="childClicked">
+          Child
+        </div>
       </div>
     </div>
 
