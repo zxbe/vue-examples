@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2020 Rick Beerendonk -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+
+    <title>Key Modifiers - Down</title>
+    <link rel="stylesheet" href="../../../../resources/oblicum.css" />
+  </head>
+  <body>
+    <div id="app">
+      <input :autofocus="'autofocus'" v-on:keyup.down="keyup" />
+      <pre>{{result}}</pre>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
