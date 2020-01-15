@@ -12,7 +12,7 @@
   <body>
     <div id="app">
       <form @submit="handleSubmit">
-        <p>{{ date }}</p>
+        <p>Page loaded at: {{ date.toLocaleTimeString() }}</p>
         <button>Submit</button>
       </form>
     </div>
