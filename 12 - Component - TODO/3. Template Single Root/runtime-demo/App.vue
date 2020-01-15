@@ -4,8 +4,9 @@
 <template>
   <!-- Surrounding div required! -->
   <div>
-    <h1>Item 1</h1>
-    <input value="Item 2" />
+    <h1>Hello World!</h1>
+    What do you think about Vue?
+    <div>It looks amazing.</div>
   </div>
 </template>
 
