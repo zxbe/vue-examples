@@ -6,12 +6,11 @@ import Vue from '../../../../node_modules/vue/dist/vue.esm.browser.js';
 new Vue({
   el: '#app',
   data: {
-    result: ''
+    result: []
   },
   methods: {
     keyup: function(event) {
-      this.result += `key: ${event.key}, code: ${event.code}
-`;
+      this.result.push(`key: ${event.key}, code: ${event.code}`);
     }
   }
 });
