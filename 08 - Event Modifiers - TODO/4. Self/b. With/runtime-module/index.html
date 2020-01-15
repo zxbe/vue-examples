@@ -11,7 +11,6 @@
   </head>
   <body>
     <p style="color: gray">
-      <u>Open the console.</u><br />
       Observe that when clicking the child, the parent's onClick handler IS NOT
       triggered.
     </p>
@@ -19,10 +18,14 @@
       <div id="parent" @click.self="parentClicked">
         Parent
         <!-- Order of @click.self and @click matters. -->
-        <div id="child" @click.self="childSelfClicked1" @click="childClicked">
+        <div id="child" @click.self="childSelfClicked" @click="childClicked">
           Child
         </div>
       </div>
+
+      <ul style="background-color: lightgray;">
+        <li v-for="item in result">{{ item }}</li>
+      </ul>
     </div>
 
     <script type="module" src="main.js"></script>
