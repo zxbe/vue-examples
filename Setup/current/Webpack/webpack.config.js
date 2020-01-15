@@ -4,6 +4,7 @@
 /* global __dirname */
 
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 
@@ -45,10 +46,15 @@ module.exports = {
     ]
   },
   plugins: [
+    new CopyWebpackPlugin([{ from: 'public' }]),
     new HtmlWebpackPlugin({
+      template: './public/index.html',
       title: 'Setup - Webpack'
     }),
     new VueLoaderPlugin(),
     new webpack.HotModuleReplacementPlugin()
-  ]
+  ],
+  resolve: {
+    extensions: ['.js', '.jsx', '.json']
+  }
 };

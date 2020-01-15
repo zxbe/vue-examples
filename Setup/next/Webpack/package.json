@@ -16,6 +16,7 @@
     "@vue/compiler-sfc": "3.0.0-alpha.2",
     "babel-eslint": "10.0.3",
     "babel-loader": "8.0.6",
+    "copy-webpack-plugin": "5.1.1",
     "css-loader": "3.4.2",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.9.0",
@@ -35,11 +36,11 @@
     "vue": "3.0.0-alpha.2"
   },
   "scripts": {
-    "build": "webpack",
-    "build-watch": "webpack --watch",
+    "build": "npm run clean && webpack --progress",
+    "clean": "rimraf build",
     "eslint": "eslint . --ext .js,.jsx,.vue --cache",
     "eslint-fix": "eslint . --ext .js,.jsx,.vue --cache --fix",
-    "start": "webpack-dev-server --open",
-    "start-debug": "webpack-dev-server"
+    "serve": "webpack-dev-server --open",
+    "serve-debug": "webpack-dev-server"
   }
 }
