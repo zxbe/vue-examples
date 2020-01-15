@@ -10,7 +10,8 @@ new Vue({
   },
   methods: {
     keyup: function(event) {
-      this.result += event.key + ',';
+      this.result += `key: ${event.key}, code: ${event.code}
+`;
     }
   }
 });
