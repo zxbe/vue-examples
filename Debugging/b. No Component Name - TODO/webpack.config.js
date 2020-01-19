@@ -46,7 +46,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Debugging - Basics'
+      title: 'Debugging - No Component Name'
     }),
     new VueLoaderPlugin(),
     new webpack.HotModuleReplacementPlugin()

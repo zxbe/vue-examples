@@ -1,6 +1,6 @@
 {
-  "name": "vue-debugging-basics",
-  "description": "Debugging - Basics",
+  "name": "vue-debugging-no-component-name",
+  "description": "Debugging - No Component Name",
   "version": "1.0.0",
   "repository": {
     "type": "git",
