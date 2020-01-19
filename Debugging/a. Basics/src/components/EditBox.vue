@@ -2,7 +2,7 @@
 <!-- Copyright © 2019 Rick Beerendonk          -->
 
 <template>
-  <input :value="value" @change="changed" />
+  <input :value="value" @keyup="changed" />
 </template>
 
 <script>
