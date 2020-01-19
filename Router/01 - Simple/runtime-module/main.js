@@ -4,6 +4,7 @@
 import Vue from '../../../node_modules/vue/dist/vue.esm.browser.js';
 import VueRouter from '../../../node_modules/vue-router/dist/vue-router.esm.js';
 
+// f.e. Registers router-link and router-view components.
 Vue.use(VueRouter);
 
 const Home = { template: '<h2>Home</h2>' };
