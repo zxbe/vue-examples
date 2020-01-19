@@ -30,6 +30,7 @@ import Page2 from './components/Page2.vue';
 export default {
   name: 'App',
   router: new VueRouter({
+    // Use HTML5 history mode (default: 'hash')
     mode: 'history',
     routes: [
       { path: '/', component: Home },
