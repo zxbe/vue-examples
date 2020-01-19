@@ -41,7 +41,7 @@
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-vue": "6.1.2",
     "html-webpack-plugin": "4.0.0-beta.11",
-    "husky": "4.0.9",
+    "husky": "4.0.10",
     "prettier": "1.19.1",
     "vue-eslint-parser": "7.0.0",
     "vue-loader": "15.8.3",
