@@ -8,7 +8,17 @@ Vue.use(VueRouter);
 
 const Home = { template: '<h2>Home</h2>' };
 const Page1 = { template: '<h2>Page 1</h2>' };
-const Page2 = { template: '<h2>Page 2</h2>' };
+const Page2 = {
+  template: `
+    <div>
+      <h2>Page 2</h2>
+      <ul>
+        <li>$route.name: {{ $route.name }}</li>
+        <li>$route.redirectedFrom: {{ $route.redirectedFrom }}</li>
+      </ul>
+    </div>
+  `
+};
 
 new Vue({
   router: new VueRouter({
