@@ -10,7 +10,7 @@ new Vue({
     classDynamic2: 'dynamic2'
   },
   methods: {
-    clicked: function() {
+    clicked() {
       this.classDynamic1 = this.classDynamic1 ? '' : 'dynamic1';
       this.classDynamic2 = this.classDynamic2 ? '' : 'dynamic2';
     }

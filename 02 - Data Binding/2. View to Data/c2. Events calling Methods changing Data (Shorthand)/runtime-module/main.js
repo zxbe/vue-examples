@@ -9,7 +9,7 @@ new Vue({
     count: 0
   },
   methods: {
-    clicked: function() {
+    clicked() {
       this.count++;
     }
   }

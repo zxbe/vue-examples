@@ -10,7 +10,7 @@ new Vue({
     isDynamic2: true
   },
   methods: {
-    clicked: function() {
+    clicked() {
       this.isDynamic1 = !this.isDynamic1;
       this.isDynamic2 = !this.isDynamic2;
     }

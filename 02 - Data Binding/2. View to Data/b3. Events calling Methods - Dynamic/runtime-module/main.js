@@ -9,7 +9,7 @@ new Vue({
     dynamicevent: 'click'
   },
   methods: {
-    clicked: function(e) {
+    clicked(e) {
       alert(`Event handled.
       Target: ${e.target}`);
     }

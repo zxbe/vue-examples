@@ -6,7 +6,7 @@ import Vue from '../../../../node_modules/vue/dist/vue.esm.browser.js';
 new Vue({
   el: '#app',
   methods: {
-    clicked: function(e) {
+    clicked(e) {
       alert(`Event handled.
       Target: ${e.target}`);
     }
