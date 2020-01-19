@@ -39,7 +39,7 @@
     "build-watch": "webpack --watch",
     "eslint": "eslint . --ext .js,.jsx,.vue --cache",
     "eslint-fix": "eslint . --ext .js,.jsx,.vue --cache --fix",
-    "start": "webpack-dev-server --open",
-    "start-debug": "webpack-dev-server"
+    "serve": "webpack-dev-server --open",
+    "serve-debug": "webpack-dev-server"
   }
 }
