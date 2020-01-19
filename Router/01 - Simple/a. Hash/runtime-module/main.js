@@ -1,8 +1,8 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import Vue from '../../../node_modules/vue/dist/vue.esm.browser.js';
-import VueRouter from '../../../node_modules/vue-router/dist/vue-router.esm.js';
+import Vue from '../../../../node_modules/vue/dist/vue.esm.browser.js';
+import VueRouter from '../../../../node_modules/vue-router/dist/vue-router.esm.js';
 
 // f.e. Registers router-link and router-view components.
 Vue.use(VueRouter);
