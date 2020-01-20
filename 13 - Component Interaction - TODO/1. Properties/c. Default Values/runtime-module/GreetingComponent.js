@@ -3,7 +3,6 @@
 
 /* eslint vue/require-prop-types: "off" */
 
-// @vue/component
 export default {
   name: 'GreetingComponent',
   props: { name: { type: String, default: 'World' } },

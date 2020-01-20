@@ -13,7 +13,6 @@
 <script>
 /* eslint vue/require-prop-types: "off" */
 
-// @vue/component
 module.exports = {
   name: 'ContainerComponent',
   data: () => ({

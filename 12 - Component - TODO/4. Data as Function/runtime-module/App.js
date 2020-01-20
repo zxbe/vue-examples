@@ -6,7 +6,6 @@ import ClickMe_Incorrect from './ClickMe_Incorrect.js';
 
 /* eslint vue/require-prop-types: "off" */
 
-// @vue/component
 export default {
   name: 'App',
   components: {

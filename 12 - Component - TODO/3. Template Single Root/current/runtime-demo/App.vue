@@ -11,7 +11,6 @@
 </template>
 
 <script>
-// @vue/component
 module.exports = {
   name: 'App'
 };

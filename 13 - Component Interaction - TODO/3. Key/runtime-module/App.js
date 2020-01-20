@@ -5,7 +5,6 @@ import ClickMe from './ClickMe.js';
 
 /* eslint vue/require-prop-types: "off" */
 
-// @vue/component
 export default {
   name: 'App',
   components: {

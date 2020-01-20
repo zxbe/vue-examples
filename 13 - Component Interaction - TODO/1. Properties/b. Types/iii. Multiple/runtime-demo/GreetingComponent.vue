@@ -8,7 +8,6 @@
 <script>
 /* eslint vue/require-default-prop: "off" */
 
-// @vue/component
 module.exports = {
   name: 'GreetingComponent',
   props: { name: [String, Number] }

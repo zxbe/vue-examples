@@ -14,7 +14,6 @@
 
 const Greeting = httpVueLoader('./Greeting.vue');
 
-// @vue/component
 module.exports = {
   name: 'App',
   components: {

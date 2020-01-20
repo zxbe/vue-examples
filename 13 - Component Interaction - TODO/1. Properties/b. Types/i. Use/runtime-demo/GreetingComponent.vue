@@ -9,7 +9,6 @@
 /* eslint vue/require-prop-types: "off" */
 /* eslint vue/require-default-prop: "off" */
 
-// @vue/component
 module.exports = {
   name: 'GreetingComponent',
   props: { name: String }
