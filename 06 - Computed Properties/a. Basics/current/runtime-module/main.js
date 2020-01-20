@@ -9,7 +9,7 @@ new Vue({
     greeting: 'Hello World!'
   },
   computed: {
-    uppercaseGreeting: function() {
+    uppercaseGreeting() {
       return this.greeting.toUpperCase();
     }
   }
