@@ -19,7 +19,8 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+/* not scoped */
 div {
   background-color: #d676ff;
 }
