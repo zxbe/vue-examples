@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2020 Rick Beerendonk -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+
+    <title>
+      Data Binding - View to Data - Events calling Methods with or without ()
+    </title>
+    <link rel="stylesheet" href="../../../../resources/oblicum.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1 @click="clicked">
+        This has been clicked {{count}} times! -- clicked
+      </h1>
+
+      <h1 @click="clicked()">
+        This has been clicked {{count}} times! -- clicked()
+      </h1>
+
+      <div>click parameters: {{ clickParams }}</div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
