@@ -11,6 +11,6 @@ new Vue({
 new Vue({
   el: '#app2',
   data: {
-    greeting: `Hello Vue ${Vue.version}!`
+    greeting: `Hi Vue ${Vue.version}!`
   }
 });

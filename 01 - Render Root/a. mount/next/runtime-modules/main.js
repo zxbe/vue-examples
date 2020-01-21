@@ -13,7 +13,7 @@ Vue.createApp().mount(
 Vue.createApp().mount(
   {
     data: {
-      greeting: `Hello Vue ${Vue.version}!`
+      greeting: `Hi Vue ${Vue.version}!`
     }
   },
   '#app2' // <div id="app2">{{ greeting }}</div>

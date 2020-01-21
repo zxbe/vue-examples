@@ -9,6 +9,6 @@ new Vue({
 
 new Vue({
   data: {
-    greeting: `Hello Vue ${Vue.version}!`
+    greeting: `Hi Vue ${Vue.version}!`
   }
 }).$mount('#app2'); // <div id="app2">{{ greeting }}</div>
