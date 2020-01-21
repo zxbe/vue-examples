@@ -3,8 +3,8 @@
 
 <template>
   <div>
-    <greeting :name="greetingText" @change="greetingChanged($event)"></greeting>
-    <h1>Hello {{ greetingText }}</h1>
+    <child @updated="childChanged($event)"></child>
+    <h1>Clicked: {{ count }}</h1>
   </div>
 </template>
 
@@ -12,21 +12,21 @@
 /* eslint vue/require-prop-types: "off" */
 /* global httpVueLoader */
 
-const Greeting = httpVueLoader('./Greeting.vue');
+const Child = httpVueLoader('./Child.vue');
 
 module.exports = {
   name: 'App',
   components: {
-    greeting: Greeting
+    child: Child
   },
-  data: function() {
+  data() {
     return {
-      greetingText: 'World'
+      count: 0
     };
   },
   methods: {
-    greetingChanged: function(value) {
-      this.greetingText = value;
+    childChanged() {
+      this.count++;
     }
   }
 };

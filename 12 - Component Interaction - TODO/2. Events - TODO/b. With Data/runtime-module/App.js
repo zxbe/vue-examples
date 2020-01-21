@@ -1,14 +1,14 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-import Greeting from './Greeting.js';
+import Child from './Child.js';
 
 /* eslint vue/require-prop-types: "off" */
 
 export default {
   name: 'App',
   components: {
-    greeting: Greeting
+    Child
   },
   data: function() {
     return {
@@ -22,7 +22,7 @@ export default {
   },
   template: `
     <div>
-      <greeting :name="greetingText" @change="greetingChanged($event)"></greeting>
+      <Child :name="greetingText" @change="greetingChanged($event)"></Child>
       <h1>Hello {{ greetingText }}</h1>
     </div>
   `

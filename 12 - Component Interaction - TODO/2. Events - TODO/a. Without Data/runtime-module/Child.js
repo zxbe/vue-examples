@@ -4,12 +4,11 @@
 /* eslint vue/require-prop-types: "off" */
 
 export default {
-  name: 'Greeting',
-  props: ['name'],
+  name: 'Child',
   methods: {
-    changed(e) {
-      this.$emit('change', e.target.value);
+    buttonClicked() {
+      this.$emit('updated');
     }
   },
-  template: '<input :value="name" @keyup="changed" />'
+  template: '<button @click="buttonClicked()">Click</button>'
 };

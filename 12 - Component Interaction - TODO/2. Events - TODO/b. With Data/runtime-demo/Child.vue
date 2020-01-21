@@ -9,7 +9,7 @@
 /* eslint vue/require-prop-types: "off" */
 
 module.exports = {
-  name: 'Greeting',
+  name: 'Child',
   props: ['name'],
   methods: {
     changed(e) {
