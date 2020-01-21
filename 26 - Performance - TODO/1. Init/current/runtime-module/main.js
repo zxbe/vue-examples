@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2018 Rick Beerendonk          !*/
+/*! Copyright © 2020 Rick Beerendonk          !*/
 
-import Vue from '../../../../../node_modules/vue/dist/vue.esm.browser.js';
+import Vue from '../../../../node_modules/vue/dist/vue.esm.browser.js';
 
 import GreetingComponent from './GreetingComponent.js';
 
@@ -11,7 +11,6 @@ Vue.config.performance = true;
 // Bootstrap
 new Vue({
   el: '#app',
-  // Register component locally
   components: {
     'greeting-component': GreetingComponent
   }
