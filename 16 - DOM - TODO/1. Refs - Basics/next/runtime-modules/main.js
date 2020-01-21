@@ -7,6 +7,7 @@ Vue.createApp().mount(
   {
     methods: {
       changed(e) {
+        // Use $refs to get direct DOM access
         this.$refs.result.innerText = `Hello ${e.target.value}!`;
       }
     }
