@@ -24,11 +24,11 @@
 
 <script>
 export default {
-  name: 'GreetingComponent',
+  name: 'App',
   components: {
-    'greeting-dutch': () => import('./GreetingDutch.js'),
-    'greeting-english': () => import('./GreetingEnglish.js'),
-    'greeting-spanish': () => import('./GreetingSpanish.js')
+    'greeting-dutch': () => import('./components/GreetingDutch.js'),
+    'greeting-english': () => import('./components/GreetingEnglish.js'),
+    'greeting-spanish': () => import('./components/GreetingSpanish.js')
   },
   data() {
     return {
