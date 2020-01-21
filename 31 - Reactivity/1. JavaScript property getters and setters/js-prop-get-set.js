@@ -8,9 +8,11 @@ Object.defineProperty(obj, 'prop1', {
   configurable: true,
   enumerable: true,
   get() {
+    console.info('--- prop1.get()');
     return this._prop1;
   },
   set(value) {
+    console.info('--- prop1.set()');
     this._prop1 = value;
   }
 });
