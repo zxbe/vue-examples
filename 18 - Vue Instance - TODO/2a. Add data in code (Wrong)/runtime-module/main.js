@@ -12,4 +12,5 @@ const vm = new Vue({
   }
 });
 
+// Vue does not allow dynamically adding new root-level reactive properties
 vm.second = 'Two';
