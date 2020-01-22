@@ -6,15 +6,15 @@
     <meta charset="utf-8" />
     <meta name="author" content="Rick Beerendonk" />
 
-    <title>Key Modifiers - System Modifier Keys - Ctrl</title>
+    <title>Key Modifiers - System Modifier Keys - Key Shift</title>
     <link rel="stylesheet" href="../../../../resources/oblicum.css" />
   </head>
   <body>
     <div id="app">
-      <h1>Use Ctrl</h1>
+      <h1>Use Shift</h1>
 
-      <input :autofocus="'autofocus'" @keyup.ctrl="keyup" />
-      <button @mousedown.ctrl="mousedown">Mouse-click</button>
+      <input :autofocus="'autofocus'" @keyup.shift="keyup" />
+      <button @mousedown.shift="mousedown">Mouse-click</button>
 
       <ul style="background-color: lightgray;">
         <li v-for="item in result">{{ item }}</li>
