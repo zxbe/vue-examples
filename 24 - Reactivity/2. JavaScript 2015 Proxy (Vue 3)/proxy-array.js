@@ -1,13 +1,11 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2015 Rick Beerendonk          !*/
+/*! Copyright © 2020 Rick Beerendonk          !*/
 
 'use strict';
 
 // Babel: Impossible due to ES5 limitations
 
-let target = {
-  techDays: 'TechDays'
-};
+let target = ['first', 'second'];
 let handler = {
   get(target, prop /*, receiver */) {
     return target[prop] + ' (changed through Proxy)';
@@ -20,8 +18,8 @@ let handler = {
 
 let proxy = new Proxy(target, handler);
 
-console.log(proxy.techDays); // TechDays (changed through Proxy)
+console.log(proxy[0]); // first (changed through Proxy)
 
-proxy.techDays = 'test';
+proxy[0] = 'test';
 
-console.log(target.techDays); // test (changed through Proxy)
+console.log(target[0]); // test (changed through Proxy)
