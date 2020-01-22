@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2020 Rick Beerendonk -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+
+    <title>List Rendering - Array - Index as Key Issue</title>
+    <link rel="stylesheet" href="../../../../resources/oblicum.css" />
+  </head>
+  <body>
+    <div id="app">
+      <button @click="insertTop">Insert at Top</button>
+
+      <ul>
+        <li v-for="(item, index) in items">
+          <input :key="index" :placeholder="item" />
+        </li>
+      </ul>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
