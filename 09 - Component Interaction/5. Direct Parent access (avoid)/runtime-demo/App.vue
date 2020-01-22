@@ -23,11 +23,6 @@ module.exports = {
     return {
       greetingText: 'World'
     };
-  },
-  methods: {
-    greetingChanged: function(value) {
-      this.greetingText = value;
-    }
   }
 };
 </script>
