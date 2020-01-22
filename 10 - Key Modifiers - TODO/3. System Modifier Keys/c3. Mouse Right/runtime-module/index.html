@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2020 Rick Beerendonk -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rick Beerendonk" />
+
+    <title>Key Modifiers - System Modifier Keys - Mouse Right</title>
+    <link rel="stylesheet" href="../../../../resources/oblicum.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Use Mouse Right</h1>
+
+      <button @mousedown.right="mousedown">Mouse-click</button>
+
+      <ul style="background-color: lightgray;">
+        <li v-for="item in result">{{ item }}</li>
+      </ul>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
