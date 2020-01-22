@@ -8,7 +8,11 @@ export default {
   props: ['name'],
   methods: {
     changed(e) {
-      // Avoid accessing the parent directly
+      // Avoid accessing the parent directly.
+      // Reasons:
+      // - It need specific internal parent knowledge,
+      //   limiting reusability.
+      // - Look out for Spaghetti code: Who changes what?
       this.$parent.greetingText = e.target.value;
     }
   },
