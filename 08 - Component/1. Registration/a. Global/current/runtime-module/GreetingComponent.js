@@ -3,5 +3,5 @@
 
 export default {
   name: 'GreetingComponent',
-  template: '<h1>Hello World!</h1>'
+  template: '<h2>Hello World!</h2>'
 };

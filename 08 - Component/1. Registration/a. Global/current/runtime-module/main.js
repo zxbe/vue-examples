@@ -4,9 +4,11 @@
 import Vue from '../../../../../node_modules/vue/dist/vue.esm.browser.js';
 
 import GreetingComponent from './GreetingComponent.js';
+import OtherComponent from './OtherComponent.js';
 
 // Register component globally
 Vue.component('greeting-component', GreetingComponent);
+Vue.component('other-component', OtherComponent);
 
 // Bootstrap
 new Vue({

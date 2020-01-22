@@ -4,9 +4,11 @@
 /* global httpVueLoader, Vue */
 
 const GreetingComponent = httpVueLoader('./GreetingComponent.vue');
+const OtherComponent = httpVueLoader('./OtherComponent.vue');
 
 // Register component globally
 Vue.component('greeting-component', GreetingComponent);
+Vue.component('other-component', OtherComponent);
 
 // Bootstrap
 new Vue({

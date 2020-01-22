@@ -2,12 +2,15 @@
 <!-- Copyright © 2018 Rick Beerendonk          -->
 
 <template>
-  <h2>Hello World!</h2>
+  <div style="background-color: lightgray">
+    <h1>Other</h1>
+    <greeting-component />
+  </div>
 </template>
 
 <script>
 module.exports = {
-  name: 'GreetingComponent'
+  name: 'OtherComponent'
 };
 </script>
 
