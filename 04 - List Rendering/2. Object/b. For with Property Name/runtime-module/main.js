@@ -7,9 +7,9 @@ new Vue({
   el: '#app',
   data: {
     object: {
-      prop1: true,
       prop2: 'two',
-      prop3: 3
+      prop3: 3,
+      prop1: true
     }
   }
 });
