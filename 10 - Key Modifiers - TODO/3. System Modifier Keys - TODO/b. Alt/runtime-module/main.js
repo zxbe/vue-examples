@@ -13,6 +13,11 @@ new Vue({
       this.result.push(
         `key: ${event.key}, code: ${event.code} (ctrlKey: ${event.ctrlKey}, shiftKey  ${event.shiftKey}, altKey: ${event.altKey}, metaKey: ${event.metaKey})`
       );
+    },
+    mousedown: function(event) {
+      this.result.push(
+        `button: ${event.button}, (ctrlKey: ${event.ctrlKey}, shiftKey  ${event.shiftKey}, altKey: ${event.altKey}, metaKey: ${event.metaKey})`
+      );
     }
   }
 });
