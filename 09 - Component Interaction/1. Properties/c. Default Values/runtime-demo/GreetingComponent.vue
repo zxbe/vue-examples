@@ -10,7 +10,12 @@
 
 module.exports = {
   name: 'GreetingComponent',
-  props: { name: { type: String, default: 'World' } }
+  props: {
+    name: {
+      type: String,
+      default: 'World'
+    }
+  }
 };
 </script>
 

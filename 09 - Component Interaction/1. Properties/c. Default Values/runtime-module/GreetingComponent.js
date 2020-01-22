@@ -5,6 +5,11 @@
 
 export default {
   name: 'GreetingComponent',
-  props: { name: { type: String, default: 'World' } },
+  props: {
+    name: {
+      type: String,
+      default: 'World'
+    }
+  },
   template: '<h1>Hello {{name}}!</h1>'
 };
