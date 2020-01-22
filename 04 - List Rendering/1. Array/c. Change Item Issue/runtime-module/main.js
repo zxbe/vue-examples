@@ -11,11 +11,21 @@ new Vue({
     items: ['one', 'two', 'three']
   },
   methods: {
-    overwriteRight() {
-      Vue.set(this.items, 0, itemId++);
+    overwriteRight1() {
+      this.$set(this.items, 0, itemId++);
+    },
+    overwriteRight2() {
+      this.items.splice(0, 1, itemId++);
+    },
+    overwriteRight3() {
+      const [, ...rest] = this.items;
+      this.items = [itemId++, ...rest];
     },
     overwriteWrong() {
       this.items[0] = itemId++;
+
+      // WRONG (performance)
+      //this.$forceUpdate();
     }
   }
 });
