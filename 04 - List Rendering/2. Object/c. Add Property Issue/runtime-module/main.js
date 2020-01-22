@@ -8,7 +8,7 @@ let itemId = 4;
 new Vue({
   el: '#app',
   data: {
-    object: {
+    obj: {
       prop1: true,
       prop2: 'two',
       prop3: 3
@@ -16,10 +16,10 @@ new Vue({
   },
   methods: {
     addRight() {
-      Vue.set(this.object, `prop ${itemId}`, itemId++);
+      this.$set(this.obj, `prop ${itemId}`, itemId++);
     },
     addWrong() {
-      this.object[itemId] = itemId++;
+      this.obj[itemId] = itemId++;
     }
   }
 });
