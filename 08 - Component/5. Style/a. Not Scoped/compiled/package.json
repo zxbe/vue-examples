@@ -2,10 +2,6 @@
   "name": "vue-component-style-not-scoped",
   "description": "Component - Style - Not Scoped",
   "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rickbeerendonk/vue-examples.git"
-  },
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",
   "devDependencies": {
