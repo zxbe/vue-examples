@@ -18,12 +18,6 @@ const basePath = process.cwd();
 //console.log('filePath: ' + filePath);
 //console.log('basePath: ' + basePath);
 
-// Exit if no filePath is given
-if (!filePath || !filePath.toLowerCase().startsWith(basePath.toLowerCase())) {
-  console.warn('No file path to open.');
-  process.exit();
-}
-
 /*** Helper functions ***/
 
 function findFileInPath(directory, file) {
@@ -42,7 +36,7 @@ function findFileInPath(directory, file) {
 
 /// Is Webpack project? ///
 
-if (fs.statSync(filePath).isDirectory()) {
+if (filePath && fs.statSync(filePath).isDirectory()) {
   const webpackConfigNames = ['webpack.config.js', 'webpack.dev.js'];
   const webpackConfigPath = webpackConfigNames.reduce(
     (path, name) => path || findFileInPath(filePath, name),
@@ -68,13 +62,16 @@ if (fs.statSync(filePath).isDirectory()) {
 
 /// Just plain html? ///
 
+// If filePath is given, we'll open that path in the browser
+let extraUri = '';
+if (filePath && filePath.toLowerCase().startsWith(basePath.toLowerCase())) {
+  const extraPath = filePath.substring(basePath.length);
+  extraUri = extraPath.split('\\').join('/');
+}
+
 const serverUri = `http://localhost:${portHttp}`;
-const extraPath = filePath.substring(basePath.length);
-const extraUri = extraPath
-  .split('\\')
-  .join('/')
-  .replace(/\/?$/, '/');
-const totalUri = `${serverUri}${extraUri}`;
+const totalUri = `${serverUri}${extraUri}${extraUri[extraUri.length - 1] !==
+  '/' && '/'}`;
 
 //console.log('serverUri: ' + serverUri);
 //console.log('extraPath: ' + extraPath);
@@ -102,4 +99,4 @@ const command =
 // Use timeout so the server is ready.
 setTimeout(function() {
   childProcess.exec(command);
-}, 200);
+}, 500);
