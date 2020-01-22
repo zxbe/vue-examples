@@ -7,7 +7,7 @@
     <meta name="author" content="Rick Beerendonk" />
 
     <title>List Rendering - Array - Change Item Issue</title>
-    <link rel="stylesheet" href="../../../../resources/oblicum.css" />
+    <link rel="stylesheet" href="../../../../../resources/oblicum.css" />
   </head>
   <body>
     <div id="app">
@@ -15,10 +15,11 @@
         <li v-for="item in items">{{ item }}</li>
       </ul>
 
-      <button @click="overwriteRight1">Overwrite item (right 1)</button><br />
-      <button @click="overwriteRight2">Overwrite item (right 2)</button><br />
-      <button @click="overwriteRight3">Overwrite item (right 3)</button><br />
-      <button @click="overwriteWrong">Overwrite item (wrong)</button>
+      <button @click="overwrite1">1. Overwrite item (wrong in Vue 3)</button
+      ><br />
+      <button @click="overwrite2">2. Overwrite item (right)</button><br />
+      <button @click="overwrite3">3. Overwrite item (right)</button><br />
+      <button @click="overwrite4">4. Overwrite item (right in Vue 3)</button>
     </div>
 
     <script type="module" src="main.js"></script>
