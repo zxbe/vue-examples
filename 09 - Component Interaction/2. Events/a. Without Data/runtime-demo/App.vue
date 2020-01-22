@@ -3,7 +3,7 @@
 
 <template>
   <div>
-    <child @updated="childChanged($event)"></child>
+    <child @updated="childChanged"></child>
     <h1>Clicked: {{ count }}</h1>
   </div>
 </template>
