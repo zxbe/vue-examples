@@ -6,14 +6,14 @@
     <meta charset="utf-8" />
     <meta name="author" content="Rick Beerendonk" />
 
-    <title>Key Modifiers - System Modifier Keys - Mouse Left</title>
+    <title>Key Modifiers - System Modifier Keys - Mouse Middle</title>
     <link rel="stylesheet" href="../../../../resources/oblicum.css" />
   </head>
   <body>
     <div id="app">
-      <h1>Use Mouse Left</h1>
+      <h1>Use Mouse Middle</h1>
 
-      <button @mousedown.left="mousedown">Mouse-click</button>
+      <button @mousedown.middle="mousedown">Mouse-click</button>
 
       <ul style="background-color: lightgray;">
         <li v-for="item in result">{{ item }}</li>
