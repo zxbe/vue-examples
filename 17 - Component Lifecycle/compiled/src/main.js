@@ -14,4 +14,4 @@ const elem = document.body.appendChild(component.$el);
 setTimeout(function() {
   vm.$destroy();
   document.body.removeChild(elem);
-}, 200);
+}, 500);

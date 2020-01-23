@@ -3,7 +3,9 @@
 
 <template>
   <div id="app">
-    <Hello :name="name" />
+    <keep-alive>
+      <component v-bind:is="currentComponent" :name="name"></component>
+    </keep-alive>
   </div>
 </template>
 
@@ -17,8 +19,19 @@ export default {
   },
   data() {
     return {
+      currentComponent: Hello,
       name: 'A'
     };
+  },
+  watch: {
+    name() {
+      setTimeout(() => {
+        // Hide component (but keep alive)
+        this.currentComponent = null;
+        // Show component (but keep alive)
+        setTimeout(() => (this.currentComponent = Hello), 100);
+      }, 100);
+    }
   },
   mounted() {
     this.$nextTick(function() {
