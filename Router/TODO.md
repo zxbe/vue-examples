@@ -1,10 +1,9 @@
 # TODO
 
-- Navigation Guards: https://router.vuejs.org/guide/advanced/navigation-guards.html
+- Navigation Guards (In Component Guards): https://router.vuejs.org/guide/advanced/navigation-guards.html#in-component-guards
 
 - Named Views: https://router.vuejs.org/guide/essentials/named-views.html#nested-named-views
 - Alias: https://router.vuejs.org/guide/essentials/redirect-and-alias.html#alias
-- Passing Props to Route Components: https://router.vuejs.org/guide/essentials/passing-props.html
 
 - Route Meta Fields: https://router.vuejs.org/guide/advanced/meta.html
 - Transitions: https://router.vuejs.org/guide/advanced/transitions.html
