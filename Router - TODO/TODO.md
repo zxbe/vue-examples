@@ -8,5 +8,5 @@
 
 - Route Meta Fields: https://router.vuejs.org/guide/advanced/meta.html
 - Transitions: https://router.vuejs.org/guide/advanced/transitions.html
-- Data Fetching: https://router.vuejs.org/guide/advanced/data-fetching.html
+- Data Fetching (before navigation): https://router.vuejs.org/guide/advanced/data-fetching.html#fetching-before-navigation
 - Scroll Behavior: https://router.vuejs.org/guide/advanced/scroll-behavior.html
