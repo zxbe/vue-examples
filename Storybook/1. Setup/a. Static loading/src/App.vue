@@ -3,17 +3,17 @@
 
 <template>
   <div id="app">
-    <Greeting name="Vue" />
+    <GreetingEditor value="Vue" />
   </div>
 </template>
 
 <script>
-import Greeting from './components/Greeting.vue';
+import GreetingEditor from './components/GreetingEditor.vue';
 
 export default {
   name: 'App',
   components: {
-    Greeting
+    GreetingEditor
   }
 };
 </script>

@@ -2,7 +2,7 @@
 <!-- Copyright © 2018 Rick Beerendonk          -->
 
 <template>
-  <h1>Hello {{ name }}!</h1>
+  <h1 :visible="name">Hello {{ name }}!</h1>
 </template>
 
 <script>
@@ -11,7 +11,7 @@ export default {
   props: {
     name: {
       type: String,
-      default: '<default>',
+      default: null,
       required: false
     }
   }
