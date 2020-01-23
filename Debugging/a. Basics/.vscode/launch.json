@@ -6,7 +6,11 @@
       "request": "launch",
       "name": "Launch Chrome against localhost",
       "url": "http://localhost:9100",
-      "webRoot": "${workspaceFolder}"
+      "webRoot": "${workspaceFolder}/src",
+      "breakOnLoad": true,
+      "sourceMapPathOverrides": {
+        "webpack:///./src/*": "${webRoot}/*"
+      }
     }
   ]
 }
