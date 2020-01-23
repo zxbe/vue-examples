@@ -2,7 +2,7 @@
 <!-- Copyright © 2018 Rick Beerendonk          -->
 
 <template>
-  <h1 :visible="name">Hello {{ name }}!</h1>
+  <h1 v-if="name">Hello {{ name }}!</h1>
 </template>
 
 <script>
