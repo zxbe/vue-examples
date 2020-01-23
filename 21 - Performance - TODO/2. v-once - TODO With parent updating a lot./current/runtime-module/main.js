@@ -11,7 +11,16 @@ Vue.config.performance = true;
 // Bootstrap
 new Vue({
   el: '#app',
+  name: 'App',
   components: {
     'greeting-component': GreetingComponent
+  },
+  data: {
+    count: 0
+  },
+  mounted() {
+    setInterval(() => {
+      this.count++;
+    }, 50);
   }
 });

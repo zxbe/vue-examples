@@ -10,7 +10,15 @@
     <link rel="stylesheet" href="../../../../resources/oblicum.css" />
   </head>
   <body>
-    <div id="app"><greeting-component></greeting-component></div>
+    <p style="color: gray">
+      Use the Vue devtools to measure the Component render time of App and
+      GreetingComponent with or without the use of v-once.
+    </p>
+
+    <div id="app">
+      {{ count }}
+      <greeting-component :count="count"></greeting-component>
+    </div>
 
     <script type="module" src="main.js"></script>
   </body>
