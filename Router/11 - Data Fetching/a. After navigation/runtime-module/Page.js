@@ -10,19 +10,19 @@ export default {
     };
   },
   created() {
-    // fetch the data when the view is created and the data is
-    // already being observed
+    // View created and data is being observed, so we can
+    // fetch the data
     this.fetchData();
   },
   watch: {
-    // call again the method if the route changes
+    // route changes, so we should
+    // fetch the data again
     $route: 'fetchData'
   },
   methods: {
     fetchData() {
       this.error = this.post = null;
       this.loading = true;
-      // replace `getPost` with your data fetching util / API wrapper
       fetch(
         `https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`
       )
