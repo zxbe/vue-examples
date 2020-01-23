@@ -2,5 +2,11 @@
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
 module.exports = {
-  stories: ['../src/stories/index.js']
+  stories: ['../src/stories/index.js'],
+  addons: [
+    '@storybook/addon-actions/register',
+    '@storybook/addon-knobs/register',
+    '@storybook/addon-links/register',
+    '@storybook/addon-notes/register'
+  ]
 };
