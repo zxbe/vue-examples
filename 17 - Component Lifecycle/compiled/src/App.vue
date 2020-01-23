@@ -4,7 +4,7 @@
 <template>
   <div id="app">
     <keep-alive>
-      <component v-bind:is="currentComponent" :name="name"></component>
+      <component :is="currentComponent" :name="name"></component>
     </keep-alive>
   </div>
 </template>
