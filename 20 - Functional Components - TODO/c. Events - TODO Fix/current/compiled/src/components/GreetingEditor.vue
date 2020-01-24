@@ -23,7 +23,6 @@ export default {
   }),
   methods: {
     changed: function(e) {
-      debugger;
       this.name = e.target.value;
     }
   }
