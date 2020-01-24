@@ -3,7 +3,7 @@
 
 <template>
   <div>
-    <EditBox :value="name" @change="e => $emit('changed', e)" />
+    <EditBox :value="name" @change="$emit('changed')" />
     <Greeting :name="name" />
   </div>
 </template>
