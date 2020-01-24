@@ -32,7 +32,7 @@
   },
   "scripts": {
     "build": "npm run clean && webpack --progress",
-    "clean": "rimraf build",
+    "clean": "rimraf dist",
     "eslint": "eslint . --ext .js,.jsx,.vue --cache",
     "eslint-fix": "eslint . --ext .js,.jsx,.vue --cache --fix",
     "serve": "webpack-dev-server --open",
