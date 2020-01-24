@@ -3,19 +3,21 @@
 
 export default {
   name: 'ContainerComponent',
-  template: `<div style="background-color: lightgray; padding: 10px">
-    The default item:
-    <div style="background-color: white; padding: 10px">
-      <slot></slot>
-      <slot name="default"></slot>
+  template: `
+    <div style="background-color: lightgray; padding: 10px">
+      The default item:
+      <div style="background-color: white; padding: 10px">
+        <slot></slot>
+        <slot name="default" />
+      </div>
+      The 1st item:
+      <div style="background-color: white; padding: 10px">
+        <slot name="first" />
+      </div>
+      The 2nd item:
+      <div style="background-color: white; padding: 10px">
+        <slot name="second" />
+      </div>
     </div>
-    The 1st item:
-    <div style="background-color: white; padding: 10px">
-      <slot name="first"></slot>
-    </div>
-    The 2nd item:
-    <div style="background-color: white; padding: 10px">
-      <slot name="second"></slot>
-    </div>
-  </div>`
+  `
 };

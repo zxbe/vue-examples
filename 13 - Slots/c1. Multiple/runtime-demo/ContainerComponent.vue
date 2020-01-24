@@ -6,15 +6,15 @@
     The default item:
     <div style="background-color: white; padding: 10px">
       <slot></slot>
-      <slot name="default"></slot>
+      <slot name="default" />
     </div>
     The 1st item:
     <div style="background-color: white; padding: 10px">
-      <slot name="first"></slot>
+      <slot name="first" />
     </div>
     The 2nd item:
     <div style="background-color: white; padding: 10px">
-      <slot name="second"></slot>
+      <slot name="second" />
     </div>
   </div>
 </template>

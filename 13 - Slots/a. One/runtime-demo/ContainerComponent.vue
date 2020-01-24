@@ -5,7 +5,7 @@
   <div style="background-color: lightgray; padding: 10px">
     The only item:
     <div style="background-color: white; padding: 10px">
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>

@@ -5,11 +5,11 @@
   <div style="background-color: lightgray; padding: 10px">
     Normal:
     <div style="background-color: white; padding: 10px">
-      <slot name="first"></slot>
+      <slot name="first" />
     </div>
     Scoped:
     <div style="background-color: white; padding: 10px">
-      <slot name="second" :source="source"></slot>
+      <slot name="second" :source="source" />
     </div>
   </div>
 </template>
