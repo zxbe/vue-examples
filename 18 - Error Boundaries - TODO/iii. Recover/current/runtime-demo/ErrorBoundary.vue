@@ -6,6 +6,7 @@
     <div v-if="error" id="error">
       <p>{{ error.message }}</p>
       <pre id="stack">{{ error.stack }}</pre>
+      <button @click="error = null">Reload</button>
     </div>
     <slot v-else />
   </div>
@@ -34,6 +35,7 @@ module.exports = {
   background: pink;
   color: red;
   padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
   overflow: hidden;
 }
 
