@@ -13,9 +13,9 @@ new Vue({
     MouseMove
   },
   template: `
-    <mouse-move v-slot="mousePosition">
+    <mouse-move v-slot="{ x, y }">
       <Greeting 
-        :name="'(x:' + mousePosition.x + ', y: ' + mousePosition.y + ')'"
+        :name="'(x:' + x + ', y: ' + y + ')'"
       />
     </mouse-move>
   `
