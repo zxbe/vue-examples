@@ -2,7 +2,7 @@
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
 export default {
-  name: 'MouseOver',
+  name: 'mouse-move',
   data() {
     return {
       mousePosition: {
@@ -23,8 +23,6 @@ export default {
     document.removeEventListener('mouseover', this.mouseOver);
   },
   render() {
-    return this.$scopedSlots.default({
-      mousePosition: this.mousePosition
-    });
+    return this.$scopedSlots.default(this.mousePosition);
   }
 };

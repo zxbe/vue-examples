@@ -13,11 +13,10 @@ new Vue({
     MouseMove
   },
   template: `
-    <MouseMove>
+    <mouse-move v-slot="mousePosition">
       <Greeting 
-        slot-scope="{ mousePosition }" 
         :name="'(x:' + mousePosition.x + ', y: ' + mousePosition.y + ')'"
       />
-    </MouseMove>
+    </mouse-move>
   `
 });
