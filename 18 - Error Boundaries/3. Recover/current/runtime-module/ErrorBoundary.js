@@ -8,7 +8,7 @@ export default {
       error: null
     };
   },
-  errorCaptured(err /*, vm, info */) {
+  errorCaptured(err) {
     // Component must have a name defined to be able to show it.
     this.error = err;
 

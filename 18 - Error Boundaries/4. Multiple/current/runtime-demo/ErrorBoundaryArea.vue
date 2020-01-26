@@ -6,7 +6,6 @@
     <div v-if="error" id="error">
       <p>{{ error.message }}</p>
       <pre id="stack">{{ error.stack }}</pre>
-      <button @click="error = null">Reload</button>
     </div>
     <slot v-else />
   </div>
@@ -14,18 +13,18 @@
 
 <script>
 module.exports = {
-  name: 'error-boundary',
+  name: 'error-boundary-area',
   data() {
     return {
       error: null
     };
   },
-  errorCaptured(err /*, vm, info */) {
+  errorCaptured(err) {
     // Component must have a name defined to be able to show it.
     this.error = err;
 
-    // Stop the error from propagating.
-    return false;
+    // Don't stop the error from propagating.
+    return true;
   }
 };
 </script>
@@ -35,7 +34,6 @@ module.exports = {
   background: pink;
   color: red;
   padding-left: 0.5rem;
-  padding-bottom: 0.5rem;
   overflow: hidden;
 }
 
