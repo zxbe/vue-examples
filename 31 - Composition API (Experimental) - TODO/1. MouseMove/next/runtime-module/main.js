@@ -7,5 +7,4 @@ import Greeting from './Greeting.js';
 
 // Bootstrap
 const app = Vue.createApp();
-app.component('greeting-component', Greeting);
-app.mount({}, '#app');
+app.mount(Greeting, '#app');
