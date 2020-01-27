@@ -19,7 +19,7 @@ const store = new Vuex.Store({
     }
   },
   actions: {
-    nameToLowerCase({ commit }) {
+    nameToLowerCase({ commit } /* destructure context */) {
       commit('nameToLowerCase');
     }
   }

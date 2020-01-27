@@ -30,6 +30,7 @@ const store = new Vuex.Store({
 
 addToList(store.state);
 
+// Actions are dispatched to the store.
 store.dispatch('nameToLowerCase');
 
 addToList(store.state);
