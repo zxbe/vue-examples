@@ -12,15 +12,15 @@ export default {
     };
   },
   methods: {
-    mouseOver(e) {
+    handleMouseMove(e) {
       this.mousePosition = { x: e.pageX, y: e.pageY };
     }
   },
   created() {
-    document.addEventListener('mouseover', this.mouseOver);
+    document.addEventListener('mousemove', this.handleMouseMove);
   },
   destroyed() {
-    document.removeEventListener('mouseover', this.mouseOver);
+    document.removeEventListener('mousemove', this.handleMouseMove);
   },
   render() {
     return this.$scopedSlots.default(this.mousePosition);

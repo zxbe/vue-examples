@@ -4,7 +4,7 @@
 import useMousePosition from './mousepos.js';
 
 export default {
-  name: 'GreetingComponent',
+  name: 'Greeting',
   template: `
     <h1>Hello World!</h1>
     <div>

@@ -3,9 +3,9 @@
 
 import * as Vue from '../../../../node_modules/vue-next/dist/vue.esm.js';
 
-import GreetingComponent from './GreetingComponent.js';
+import Greeting from './Greeting.js';
 
 // Bootstrap
 const app = Vue.createApp();
-app.component('greeting-component', GreetingComponent);
+app.component('greeting-component', Greeting);
 app.mount({}, '#app');
