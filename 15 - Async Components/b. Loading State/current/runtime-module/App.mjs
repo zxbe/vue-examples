@@ -6,10 +6,16 @@ import LoadingComponent from './components/Loading.mjs';
 
 function createAsyncComponent(module) {
   return () => ({
+    // Load component (using a Promise)
     component: import(module),
+    // Component to show while loading
     loading: LoadingComponent,
+    // Component to show when load fails
     error: ErrorComponent,
-    delay: 200,
+    // Delay before showing loading component in ms
+    // Default = 200ms, so we don't see lots of spinners on fast websites.
+    delay: 100,
+    // Timeout to show error in ms (default: Infinity).
     timeout: 2000
   });
 }
@@ -17,18 +23,7 @@ function createAsyncComponent(module) {
 export default {
   name: 'App',
   components: {
-    'greeting-dutch': () => ({
-      // Load component (using a Promise)
-      component: import('./GreetingDutch.mjs'),
-      // Show while loading
-      loading: LoadingComponent,
-      // Show when load fails
-      error: ErrorComponent,
-      // Delay before showing loading component in ms (default: 200ms)
-      delay: 200,
-      // Timeout to show error in ms (default: Infinity).
-      timeout: 2000
-    }),
+    'greeting-dutch': createAsyncComponent('./GreetingDutch.mjs'),
     'greeting-english': createAsyncComponent('./GreetingEnglish.mjs'),
     'greeting-spanish': createAsyncComponent('./GreetingSpanish.mjs'),
     'greeting-unknown': createAsyncComponent('./does-not-exists')
