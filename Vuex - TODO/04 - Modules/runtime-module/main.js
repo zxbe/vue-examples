@@ -9,21 +9,20 @@ import { addToList } from './helpers.js';
 // Always call this first.
 Vue.use(Vuex);
 
+const INCREASE = 'INCREASE';
+
 const moduleA = {
   state: {
-    name: 'CreateStore'
+    value: 0
   },
   mutations: {
-    nameToLowerCase(state) {
-      state.name = state.name.toLowerCase();
+    [INCREASE](state) {
+      state.value++;
     }
   },
   actions: {
-    // Actions are similar to mutations, but actions:
-    // - commit mutations (don't mutate directly)
-    // - can contain arbitrary asynchronous operations.
-    nameToLowerCase(context) {
-      context.commit('nameToLowerCase');
+    [INCREASE](context) {
+      context.commit(INCREASE);
     }
   }
 };
@@ -55,12 +54,12 @@ const store = new Vuex.Store({
 
 addToList(store.state);
 
-store.dispatch('nameToLowerCase');
+store.dispatch('INCREASE');
 
 addToList(store.state);
 
 store.dispatch('CHANGE_NAME', {
-  name: 'ChangedName' /* potentially more values */
+  name: 'ChangedName'
 });
 
 addToList(store.state);
