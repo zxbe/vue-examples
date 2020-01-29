@@ -32,7 +32,7 @@ const GreetingEnglish = httpVueLoader('./GreetingEnglish.vue');
 const GreetingSpanish = httpVueLoader('./GreetingSpanish.vue');
 
 module.exports = {
-  name: 'GreetingComponent',
+  name: 'App',
   components: {
     'greeting-dutch': GreetingDutch,
     'greeting-english': GreetingEnglish,

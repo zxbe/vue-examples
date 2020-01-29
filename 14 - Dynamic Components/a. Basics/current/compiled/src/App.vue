@@ -28,7 +28,7 @@ import GreetingEnglish from './components/GreetingEnglish.vue';
 import GreetingSpanish from './components/GreetingSpanish.vue';
 
 export default {
-  name: 'GreetingComponent',
+  name: 'App',
   components: {
     'greeting-dutch': GreetingDutch,
     'greeting-english': GreetingEnglish,
