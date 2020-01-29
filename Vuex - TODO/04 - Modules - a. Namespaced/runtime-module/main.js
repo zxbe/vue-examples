@@ -11,6 +11,8 @@ Vue.use(Vuex);
 const INCREASE = 'INCREASE';
 
 const moduleA = {
+  // Namespaced: To prevent name collision
+  namespaced: true,
   state: {
     value: 0
   },
@@ -29,6 +31,8 @@ const moduleA = {
 const CHANGE_NAME = 'CHANGE_NAME';
 
 const moduleB = {
+  // Namespaced: To prevent name collision
+  namespaced: true,
   state: {
     name: 'CreateStore'
   },
@@ -53,13 +57,13 @@ const store = new Vuex.Store({
 
 addToList(store.state);
 
-// Be aware for name collision between actions from different modules
-store.dispatch('INCREASE');
+// Namespaced action name.
+store.dispatch('a/INCREASE');
 
 addToList(store.state);
 
-// Be aware for name collision between actions from different modules
-store.dispatch('CHANGE_NAME', {
+// Namespaced action name.
+store.dispatch('b/CHANGE_NAME', {
   name: 'ChangedName'
 });
 
