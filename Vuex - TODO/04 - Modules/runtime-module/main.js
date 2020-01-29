@@ -54,10 +54,12 @@ const store = new Vuex.Store({
 
 addToList(store.state);
 
+// Be aware for name collision between actions from different modules
 store.dispatch('INCREASE');
 
 addToList(store.state);
 
+// Be aware for name collision between actions from different modules
 store.dispatch('CHANGE_NAME', {
   name: 'ChangedName'
 });
