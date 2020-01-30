@@ -15,6 +15,7 @@ const store = new Vuex.Store({
 const App = {
   name: 'App',
   computed: {
+    // Relatively easy to add a computed property
     state() {
       return this.$store.state;
     }
