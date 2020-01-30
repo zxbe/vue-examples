@@ -11,19 +11,19 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    name: 'CreateStore'
+    year: 2020
   },
   mutations: {
-    nameToLowerCase(state) {
-      state.name = state.name.toLowerCase();
+    increment(state) {
+      state.year++;
     }
   },
   actions: {
     // Actions are similar to mutations, but actions:
     // - commit mutations (don't mutate directly)
     // - can contain arbitrary asynchronous operations.
-    nameToLowerCase(context) {
-      context.commit('nameToLowerCase');
+    increment(context) {
+      context.commit('increment');
     }
   }
 });
@@ -31,6 +31,6 @@ const store = new Vuex.Store({
 addToList(store.state);
 
 // Actions are dispatched to the store.
-store.dispatch('nameToLowerCase');
+store.dispatch('increment');
 
 addToList(store.state);

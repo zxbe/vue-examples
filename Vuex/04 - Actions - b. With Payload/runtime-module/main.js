@@ -9,28 +9,28 @@ import { addToList } from './helpers.js';
 // Always call this first.
 Vue.use(Vuex);
 
-const CHANGE_NAME = 'CHANGE_NAME';
+const INCREMENT = 'increment';
 
 const store = new Vuex.Store({
   state: {
-    name: 'CreateStore'
+    year: 2020
   },
   mutations: {
-    [CHANGE_NAME](state, payload) {
-      state.name = payload.name;
+    [INCREMENT](state, payload) {
+      state.year += payload.value;
     }
   },
   actions: {
-    [CHANGE_NAME]({ commit }, payload) {
-      commit(CHANGE_NAME, payload);
+    [INCREMENT]({ commit }, payload) {
+      commit(INCREMENT, payload);
     }
   }
 });
 
 addToList(store.state);
 
-store.dispatch('CHANGE_NAME', {
-  name: 'ChangedName' /* potentially more values */
+store.dispatch(INCREMENT, {
+  value: 5 /* potentially more values */
 });
 
 addToList(store.state);
