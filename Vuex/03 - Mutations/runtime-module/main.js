@@ -11,17 +11,17 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    name: 'CreateStore'
+    year: 2020
   },
   mutations: {
-    nameToLowerCase(state) {
-      state.name = state.name.toLowerCase();
+    increment(state) {
+      state.year++;
     }
   }
 });
 
 addToList(store.state);
 
-store.commit('nameToLowerCase');
+store.commit('increment');
 
 addToList(store.state);
