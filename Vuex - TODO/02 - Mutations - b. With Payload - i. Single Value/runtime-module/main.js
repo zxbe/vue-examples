@@ -2,7 +2,7 @@
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
 import Vue from '../../../node_modules/vue/dist/vue.esm.browser.js';
-import Vuex from '../../../node_modules/vuex/dist/vuex.esm.js';
+import Vuex from '../../../node_modules/vuex/dist/vuex.esm.browser.js';
 
 import { addToList } from './helpers.js';
 
