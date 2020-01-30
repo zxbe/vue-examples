@@ -16,11 +16,16 @@ export default new Vuex.Store({
     ]
   },
   getters: {
+    // 1a. Property style
     females: state => {
       return state.items.filter(item => item.sex === 'female');
     },
-    dutch: state => {
-      return state.items.filter(item => item.country === 'NL');
-    }
+
+    // 1b. Property style + Use other getter
+    femaleCount: (state, getters) => getters.females.length,
+
+    // 2. Function style
+    fromCountry: state => country =>
+      state.items.filter(item => item.country === country)
   }
 });
