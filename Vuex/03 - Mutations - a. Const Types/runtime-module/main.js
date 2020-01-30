@@ -9,21 +9,21 @@ import { addToList } from './helpers.js';
 // Always call this first.
 Vue.use(Vuex);
 
-const NAME_TO_LOWER_CASE = 'NAME_TO_LOWER_CASE';
+const INCREMENT = 'increment';
 
 const store = new Vuex.Store({
   state: {
-    name: 'CreateStore'
+    year: 2019
   },
   mutations: {
-    [NAME_TO_LOWER_CASE](state) {
-      state.name = state.name.toLowerCase();
+    [INCREMENT](state) {
+      state.year++;
     }
   }
 });
 
 addToList(store.state);
 
-store.commit(NAME_TO_LOWER_CASE);
+store.commit(INCREMENT);
 
 addToList(store.state);

@@ -11,7 +11,7 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    year: 2020
+    year: 2019
   },
   mutations: {
     increment(state) {
