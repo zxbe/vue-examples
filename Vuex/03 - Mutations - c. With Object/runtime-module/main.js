@@ -9,24 +9,28 @@ import { addToList } from './helpers.js';
 // Always call this first.
 Vue.use(Vuex);
 
-const CHANGE_NAME = 'CHANGE_NAME';
+const CHANGE = 'change';
 
 const store = new Vuex.Store({
   state: {
-    name: 'CreateStore'
+    name: 'Initial',
+    year: 2019
   },
   mutations: {
-    [CHANGE_NAME](state, payload) {
+    [CHANGE](state, payload) {
       state.name = payload.name;
+      state.year = payload.year;
     }
   }
 });
 
 addToList(store.state);
 
+// Pass an object instead of 2 values to commit:
 store.commit({
-  type: CHANGE_NAME,
-  name: 'ChangedName' /* potentially more values */
+  type: CHANGE,
+  name: 'Update',
+  year: 2020
 });
 
 addToList(store.state);
