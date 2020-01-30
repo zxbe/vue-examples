@@ -8,7 +8,7 @@ import { addToList } from './helpers.js';
 
 Vue.use(Vuex);
 
-const INCREASE = 'INCREASE';
+const CHANGE = 'CHANGE';
 
 const moduleA = {
   // Namespaced: To prevent name collision
@@ -17,18 +17,16 @@ const moduleA = {
     value: 0
   },
   mutations: {
-    [INCREASE](state) {
-      state.value++;
+    [CHANGE](state, value) {
+      state.value = value;
     }
   },
   actions: {
-    [INCREASE](context) {
-      context.commit(INCREASE);
+    [CHANGE]({ commit }, payload) {
+      commit(CHANGE, payload);
     }
   }
 };
-
-const CHANGE_NAME = 'CHANGE_NAME';
 
 const moduleB = {
   // Namespaced: To prevent name collision
@@ -37,13 +35,13 @@ const moduleB = {
     name: 'CreateStore'
   },
   mutations: {
-    [CHANGE_NAME](state, payload) {
-      state.name = payload.name;
+    [CHANGE](state, value) {
+      state.name = value;
     }
   },
   actions: {
-    [CHANGE_NAME]({ commit }, payload) {
-      commit(CHANGE_NAME, payload);
+    [CHANGE]({ commit }, payload) {
+      commit(CHANGE, payload.name);
     }
   }
 };
@@ -58,12 +56,12 @@ const store = new Vuex.Store({
 addToList(store.state);
 
 // Namespaced action name.
-store.dispatch('a/INCREASE');
+store.dispatch('a/CHANGE', 2020);
 
 addToList(store.state);
 
 // Namespaced action name.
-store.dispatch('b/CHANGE_NAME', {
+store.dispatch('b/CHANGE', {
   name: 'ChangedName'
 });
 
