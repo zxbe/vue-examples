@@ -2,7 +2,7 @@
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
 import Vue from '../../../../node_modules/vue/dist/vue.esm.browser.js';
-import VueRouter from '../../../../node_modules/vue-router/dist/vue-router.esm.js';
+import VueRouter from '../../../../node_modules/vue-router/dist/vue-router.esm.browser.js';
 
 // f.e. Registers router-link and router-view components.
 Vue.use(VueRouter);
