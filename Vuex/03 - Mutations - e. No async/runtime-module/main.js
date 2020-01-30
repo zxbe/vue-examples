@@ -9,20 +9,20 @@ import { addToList } from './helpers.js';
 // Always call this first.
 Vue.use(Vuex);
 
-const NAME_TO_LOWER_CASE = 'NAME_TO_LOWER_CASE';
+const INCREMENT = 'increment';
 
 const store = new Vuex.Store({
   state: {
-    name: 'CreateStore'
+    year: 2019
   },
   mutations: {
-    [NAME_TO_LOWER_CASE](state) {
+    [INCREMENT](state) {
       // Never use async functions, because it is hard to debug.
       // This is wrong:
       (async () => {
         // And this is also wrong:
         setTimeout(() => {
-          state.name = state.name.toLowerCase();
+          state.year++;
         }, 1000);
       })();
     }
@@ -31,6 +31,9 @@ const store = new Vuex.Store({
 
 addToList(store.state);
 
-store.commit(NAME_TO_LOWER_CASE);
+store.commit(INCREMENT);
 
 addToList(store.state);
+
+// Somewhere in the future the value will be correct:
+setTimeout(() => addToList(store.state), 1500);
