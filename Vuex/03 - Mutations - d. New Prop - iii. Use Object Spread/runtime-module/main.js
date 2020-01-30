@@ -9,7 +9,7 @@ import { addToList } from './helpers.js';
 // Always call this first.
 Vue.use(Vuex);
 
-const SET_NEW_PROP = 'SET_NEW_PROP';
+const SET_NEW_PROP = 'setNewProp';
 
 const store = new Vuex.Store({
   state: {
