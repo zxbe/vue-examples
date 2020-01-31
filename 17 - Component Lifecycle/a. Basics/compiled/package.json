@@ -1,6 +1,6 @@
 {
-  "name": "vue-component-lifecycle",
-  "description": "Component Lifecycle",
+  "name": "vue-component-lifecycle-basics",
+  "description": "Component Lifecycle-basics",
   "version": "1.0.0",
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",

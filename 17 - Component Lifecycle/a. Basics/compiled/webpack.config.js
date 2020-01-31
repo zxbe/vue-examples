@@ -49,7 +49,7 @@ module.exports = {
     new CopyWebpackPlugin([{ from: 'public' }]),
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      title: 'Component Lifecycle'
+      title: 'Component Lifecycle Basics'
     }),
     new VueLoaderPlugin(),
     new webpack.HotModuleReplacementPlugin()
