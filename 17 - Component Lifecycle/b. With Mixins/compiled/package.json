@@ -1,6 +1,6 @@
 {
-  "name": "vue-component-lifecycle-basics",
-  "description": "Component Lifecycle - Basics",
+  "name": "vue-component-lifecycle-with-mixins",
+  "description": "Component Lifecycle - with Mixins",
   "version": "1.0.0",
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",
