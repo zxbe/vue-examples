@@ -11,9 +11,7 @@ import { INCREMENT } from './store.js';
 export default {
   name: 'App',
   computed: mapState(['year']),
-  methods: mapMutations({
-    increment: (commit, value = 1) => commit(INCREMENT, { value })
-  }),
+  methods: mapMutations([INCREMENT]),
   template: `
     <div>
       <h1>{{ year }}</h1>
