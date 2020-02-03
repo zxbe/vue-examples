@@ -11,9 +11,8 @@ import { INCREMENT } from './store.js';
 export default {
   name: 'App',
   computed: mapState(['year']),
-  // methods: mapActions([INCREMENT]),
   methods: mapActions({
-    increment(dispatch, value = 1) {
+    increment(dispatch, value) {
       dispatch(INCREMENT, value);
     }
   }),

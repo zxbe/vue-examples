@@ -13,7 +13,7 @@ export default new Vuex.Store({
     year: 2020
   },
   mutations: {
-    [INCREMENT](state, payload) {
+    [INCREMENT](state, payload = 1) {
       state.year += payload;
     }
   },
